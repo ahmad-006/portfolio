@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to MrSheikho - A passionate web developer showcasing skills, projects, and services. Explore my portfolio and get in touch!"
+    />
+    <meta
+      name="keywords"
+      content="web development, frontend developer, HTML, CSS, JavaScript, UI/UX design, portfolio"
+    />
+    <meta name="author" content="Ahmad Aamir" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="MrSheikho - Web Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Discover the portfolio of Ahmad Aamir, a web developer skilled in HTML, CSS, and JavaScript. Explore projects and services."
+    />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:url" content="https://www.mrsheikho.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://www.mrsheikho.com" />
+    <title>Portfolio - Ahmad Aamir</title>
+    <link rel="icon" href="./images/logoEG.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/dd516bc2de.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <!-- ========== Start Header ========== -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./images/logoEG.png" alt="" class="logo" />
+          <ul id="sidemenu">
+            <li class="links"><a href="#header">HOME</a></li>
+            <li class="links"><a href="#about">ABOUT</a></li>
+            <li class="links"><a href="#services">SERVICES</a></li>
+            <li class="links"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="links"><a href="#contact">CONTACT</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+      </div>
+
+      <!-- ========== End Header ========== -->
+      <!--? ========== Start Hero Section ========== -->
+
+      <div class="container">
+        <div class="main-heading">
+          <p class="sub-heading">HI THERE.....</p>
+          <h1 class="heading">my name is <span>Ahmad Aamir</span></h1>
+          <p class="about-me">
+            I am an aspiring full-stack developer with a strong focus on
+            front-end technologies. Currently, I am learning React along with
+            modern libraries and frameworks, and steadily working towards
+            mastering the MERN stack. My goal is to build scalable,
+            user-friendly web applications and grow into a developer who
+            delivers impactful solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--? ========== End Hero Section ========== -->
+
+    <!-- ========== Start ABOUT ========== -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col--1">
+            <img src="/images/about-2.jpg" alt="" />
+          </div>
+          <div class="about-col--2">
+            <h1 class="sub-title">ABOUT ME</h1>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                SKILLS
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                EXPERIENCE
+              </p>
+              <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>HTML</span> <br />
+                  I create well-structured, semantic, and accessible web pages,
+                  ensuring a solid foundation for any project. My focus is on
+                  clean code and SEO-friendly markup.
+                </li>
+                <li>
+                  <span>CSS</span> <br />
+                  I design responsive and visually appealing layouts using
+                  Flexbox, Grid, and animations. My goal is to create smooth and
+                  engaging user experiences across all devices.
+                </li>
+                <li>
+                  <span>JavaScript</span> <br />
+                  I build interactive and dynamic web experiences using DOM
+                  manipulation, event handling, and API integration. My focus is
+                  on performance optimization and seamless functionality.
+                </li>
+                <li>
+                  <span>React</span> <br />
+                  I develop interactive, component-based applications using
+                  React, managing state efficiently and integrating APIs for
+                  modern, user-friendly interfaces.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span
+                    >MERN Stack Development Intern – IIFA TECH (July 2025 -
+                    Present)</span
+                  >
+                  <br />
+                  Contributing to the development of responsive, user-friendly
+                  web applications using React.js as part of the MERN stack.
+                  Collaborating with senior developers to implement UI
+                  components, integrate APIs, and follow best practices in
+                  JavaScript, ES6+, and modern frontend workflows. Gaining
+                  hands-on exposure to backend technologies (Node.js,
+                  Express.js) and database management (MongoDB). Applying agile
+                  methodologies, version control (Git/GitHub), and clean code
+                  principles to deliver maintainable and scalable solutions.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span
+                    >Matriculation – Allied Group of Schools, Lahore (2021 -
+                    2023)</span
+                  >
+                  <br />
+                  Completed Science with Computer. Gained basic programming
+                  skills and foundational knowledge in HTML and C++.
+                </li>
+
+                <li>
+                  <span
+                    >Intermediate in Computer Science (ICS) – Aspire Group of
+                    Colleges, Lahore (2023 - 2025)</span
+                  >
+                  <br />
+                  Studied Computer Science, Mathematics, and Physics. Gained
+                  practical experience in C++, Data Structures, and web
+                  development. Built projects including interactive websites and
+                  small web applications.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End ABOUT ========== -->
+
+    <!-- ========== Start Services ========== -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-palette"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              I focus on crafting intuitive and engaging user experiences by
+              applying design principles, usability testing, and modern UI
+              trends. My goal is to create visually appealing and user-friendly
+              interfaces that enhance accessibility and interaction.
+            </p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>
+              With expertise in HTML, CSS, and JavaScript, I develop responsive
+              and dynamic websites. I ensure smooth performance, cross-browser
+              compatibility, and an optimized user experience. Currently, I'm
+              expanding my knowledge in modern frameworks and backend
+              technologies.
+            </p>
+          </div>
+
+          <div>
+            <i class="fas fa-puzzle-piece"></i>
+            <h2>Logic building</h2>
+            <p>
+              I enjoy building logic-based projects using JavaScript. From
+              problem-solving challenges to creative mini projects, I focus on
+              strengthening my core programming logic and creating engaging user
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Services ========== -->
+
+    <!-- ========== Start Portfolio ========== -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">MY WORK</h1>
+        <div class="work-list">
+          <div class="work">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+              alt="React Logo"
+              width="50"
+              height="50"
+            />
+            <div class="layer">
+              <h3>React Quiz App</h3>
+              <p>
+                Developed an interactive <strong>quiz application</strong> using
+                <strong>ReactJS</strong> with global state management through
+                <strong>Context API</strong> and <strong>useReducer</strong>.
+                Added features like multiple-choice questions, scoring system,
+                high-score tracking, and countdown timer. Deployed on
+                <strong>Netlify</strong>.
+              </p>
+              <a href="https://react-quiz-by-ms.netlify.app/" target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+              alt="React Logo"
+              width="50"
+              height="50"
+            />
+            <div class="layer">
+              <h3>React Fast Pizza</h3>
+              <p>
+                Built a pizza-ordering interface using
+                <strong>ReactJS</strong> with <strong>Redux Toolkit</strong> for
+                global state management and <strong>React Router</strong> for
+                client-side routing. Implemented dynamic menu fetching, cart
+                management, order tracking, and responsive layouts with
+                <strong>TailwindCSS</strong>.
+              </p>
+              <a
+                href="https://react-fast-pizza-by-ms.netlify.app/"
+                target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+              alt="JavaScript Logo"
+              width="50"
+              height="50"
+            />
+            <div class="layer">
+              <h3>Bankist website</h3>
+              <p>
+                This is the official website of Bankist. Although a
+                re-implementation, it required deep knowledge in DOM
+                manipulation and JS logic.
+              </p>
+              <a href="https://bankist-app-rebuild.netlify.app/" target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="./projects.html" target="_blank" class="btn">See More</a>
+      </div>
+    </div>
+    <!-- ========== End Portfolio ========== -->
+
+    <!-- ========== Start Contact Box ========== -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">CONTACT ME</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i> ahmadaamir1806@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 0313-4424048</p>
+            <div class="social-icons">
+              <a href="https://x.com/MrSheikho0o" target="_blank"
+                ><i class="fa-brands fa-twitter-square"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/mrsheikho_06/?utm_source=ig_web_button_share_sheet"
+                target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ahmad-aamir-5b210a371/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/ahmad-006" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your name" required />
+              <input type="email" name="Email" placeholder="Your Email" />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+        <span id="msg">
+          <a href="/adittional files/cv.pdf" download>GET RESUME</a>
+        </span>
+      </div>
+      <div class="copyright">
+        <p>
+          CopyRight © MrSheikho.....Made with
+          <i class="fa-solid fa-heart"></i> by Ahmad Aamir
+        </p>
+      </div>
+    </div>
+    <!-- ========== End Contact Box ========== -->
+
+    <!-- ========== Start JS ========== -->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-20rem";
+      }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbynkV7Ezet8B-8MLwortMJXa6dr1KSxzEJNG9SHPv-Ocv60Ixh9JAO9Y8q0v0-ZmKBhgw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        msg.innerHTML = "Sending...";
+
+        try {
+          const response = await fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form),
+          });
+          if (response.ok) {
+            msg.innerHTML = "Message Sent Successfully";
+            form.reset();
+          } else {
+            msg.innerHTML = "Error! Message not sent.";
+          }
+        } catch (error) {
+          msg.innerHTML = "Error! Message not sent.";
+          console.error("Error!", error.message);
+        }
+
+        setTimeout(() => {
+          msg.innerHTML = "";
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>

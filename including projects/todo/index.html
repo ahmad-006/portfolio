@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #4d5656;
+      }
+      div:first-of-type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        color: black;
+        font-weight: 900;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 25vh;
+      }
+      #inputValue {
+        width: 20%;
+        height: 28px;
+        margin: 15px;
+        color: black;
+        font-weight: 800;
+        background-color: #d7dbdd;
+        border: 1px solid #32745c;
+        border-radius: 25px;
+        padding: 0 10px;
+      }
+      button {
+        height: 45px;
+        background-color: #32745c;
+        transition: 0.3s ease-in-out;
+        border: none;
+        border-radius: 50px;
+        &:hover {
+          background-color: #d7dbdd;
+        }
+      }
+      .todo-list {
+        width: 30%;
+        height: auto;
+        background-color: #bdc3c7;
+        margin: 20px auto;
+        border: 15px solid #32745c;
+        border-radius: 20px;
+        &:empty {
+          border: none;
+          background-color: transparent;
+          border-radius: 0;
+        }
+      }
+      li {
+        list-style-type: square;
+        color: #233d21;
+        font-size: 20px;
+        margin-top: 10px;
+        text-align: left;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #233d21;
+      }
+      #retry {
+        text-align: center;
+        font-weight: 900;
+        font-size: 30px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <!-- <div>
+        <h1 class="text"></h1>
+      </div> -->
+      <h1>SIMPLE TO DO LIST</h1>
+
+      <div class="input-btn">
+        <input type="text" id="inputValue" />
+        <button class="clickBtn">ADD TO LIST</button>
+      </div>
+      <div class="todo-list"></div>
+      <h2 id="retry"></h2>
+    </form>
+    <script>
+      //    TODO :-    CREATE A TODO LIST
+
+let inputElement = document.querySelector("#inputValue");
+let clickBTn = document.querySelector(".clickBtn");
+let divElement = document.querySelector(".todo-list");
+let retryHead = document.getElementById("retry");
+let localTodoList = [];
+
+// Function to get data from local storage
+const getTodoListFromLocal = () => {
+  return JSON.parse(localStorage.getItem("todoListData")) || [];
+};
+
+// Function to add tasks to task section
+const clickFunction = (e) => {
+  if (inputElement.value !== "") {
+    e.preventDefault();
+    localTodoList = getTodoListFromLocal();
+
+    // Check if task already exists
+    if (!localTodoList.includes(inputElement.value)) {
+      localTodoList.push(inputElement.value);
+      localStorage.setItem("todoListData", JSON.stringify(localTodoList));
+
+      // Create new list item
+      let newElement = document.createElement("li");
+      newElement.textContent = inputElement.value;
+
+      // Create delete button
+      let deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "delete";
+      deleteBtn.classList.add("deleteBtn");
+
+      // Append to li
+      newElement.append(deleteBtn);
+
+      // Append to div
+      divElement.append(newElement);
+
+      // Clear input
+      inputElement.value = "";
+      inputElement.focus();
+      retryHead.innerText = "";
+    } else {
+      retryHead.innerText = "Task already exists!";
+    }
+  } else {
+    e.preventDefault();
+    retryHead.innerText = "Please Enter A Task......!";
+  }
+};
+
+// Function to render todo list from local storage
+const renderTodoList = () => {
+  divElement.innerHTML = "";
+  localTodoList = getTodoListFromLocal();
+
+  localTodoList.forEach((task) => {
+    // Create new list item
+    let newElement = document.createElement("li");
+    newElement.textContent = task;
+
+    // Create delete button
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "delete";
+    deleteBtn.classList.add("deleteBtn");
+
+    // Append to li
+    newElement.append(deleteBtn);
+
+    // Append to div
+    divElement.append(newElement);
+  });
+};
+
+// Render todo list initially
+renderTodoList();
+
+// Event listener to delete task
+divElement.addEventListener("click", (e) => {
+  if (e.target.classList.contains("deleteBtn")) {
+    let task = e.target.previousSibling.textContent;
+    localTodoList = localTodoList.filter((t) => t !== task);
+    localStorage.setItem("todoListData", JSON.stringify(localTodoList));
+    e.target.parentElement.remove();
+  }
+});
+
+// Event listener to add task button
+clickBTn.addEventListener("click", (e) => {
+  clickFunction(e);
+});
+
+// Event listener to input element
+inputElement.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    clickFunction();
+  }
+});
+    </script>
+  </body>
+</html>
