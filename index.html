@@ -24,12 +24,15 @@
     <link rel="canonical" href="https://www.mrsheikho.com" />
     <title>Portfolio - Ahmad Aamir</title>
     <link rel="icon" href="./images/logoEG.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/dd516bc2de.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -44,7 +47,7 @@
             <li class="links"><a href="#services">SERVICES</a></li>
             <li class="links"><a href="#portfolio">PORTFOLIO</a></li>
             <li class="links"><a href="#contact">CONTACT</a></li>
-            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
@@ -70,107 +73,100 @@
     <!-- ========== Start ABOUT ========== -->
     <div id="about">
       <div class="container">
-        <div class="row">
-          <div class="about-col--1">
-            <img src="/images/about-2.jpg" alt="" />
+        <div class="about-details">
+          <h1 class="sub-title">ABOUT ME</h1>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              SKILLS
+            </p>
+            <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+            <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
           </div>
-          <div class="about-col--2">
-            <h1 class="sub-title">ABOUT ME</h1>
 
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                SKILLS
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                EXPERIENCE
-              </p>
-              <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
-            </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Full-Stack Development</span>
+                Proficient in the MERN stack, with a strong understanding of
+                both front-end and back-end development. Experienced in building
+                complete web applications from concept to deployment.
+              </li>
+              <li>
+                <span>Front-End</span>
+                Expert in React.js for building dynamic and responsive user
+                interfaces. Skilled in state management with Redux and Context
+                API, and experienced with modern front-end tools like Webpack
+                and Babel.
+              </li>
+              <li>
+                <span>Back-End</span>
+                Adept at building robust and scalable RESTful APIs with Node.js
+                and Express.js. Experienced in user authentication, data
+                validation, and middleware implementation.
+              </li>
+              <li>
+                <span>Databases</span>
+                Skilled in designing and managing NoSQL databases with MongoDB
+                and Mongoose. Experienced in data modeling, indexing, and
+                aggregation pipelines for optimal performance.
+              </li>
+            </ul>
+          </div>
 
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li>
-                  <span>Full-Stack Development</span><br />
-                  Proficient in the MERN stack, with a strong understanding of
-                  both front-end and back-end development. Experienced in
-                  building complete web applications from concept to deployment.
-                </li>
-                <li>
-                  <span>Front-End</span><br />
-                  Expert in React.js for building dynamic and responsive user
-                  interfaces. Skilled in state management with Redux and Context
-                  API, and experienced with modern front-end tools like Webpack
-                  and Babel.
-                </li>
-                <li>
-                  <span>Back-End</span><br />
-                  Adept at building robust and scalable RESTful APIs with
-                  Node.js and Express.js. Experienced in user authentication,
-                  data validation, and middleware implementation.
-                </li>
-                <li>
-                  <span>Databases</span><br />
-                  Skilled in designing and managing NoSQL databases with MongoDB
-                  and Mongoose. Experienced in data modeling, indexing, and
-                  aggregation pipelines for optimal performance.
-                </li>
-              </ul>
-            </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span
+                  >MERN Stack Development Intern – IIFA TECH (July 2025 -
+                  Present)</span
+                >
+                <br />
+                - Developed and maintained responsive user interfaces using
+                React.js, resulting in a 20% increase in user engagement.
+                <br />
+                - Built and integrated RESTful APIs using Node.js and
+                Express.js, improving data retrieval times by 30%.
+                <br />
+                - Managed and optimized MongoDB databases, ensuring data
+                integrity and high availability.
+                <br />
+                - Collaborated with a team of developers in an Agile
+                environment, contributing to the successful launch of three
+                major features.
+              </li>
+            </ul>
+          </div>
 
-            <div class="tab-contents" id="experience">
-              <ul>
-                <li>
-                  <span
-                    >MERN Stack Development Intern – IIFA TECH (July 2025 -
-                    Present)</span
-                  >
-                  <br />
-                  - Developed and maintained responsive user interfaces using
-                  React.js, resulting in a 20% increase in user engagement.
-                  <br />
-                  - Built and integrated RESTful APIs using Node.js and
-                  Express.js, improving data retrieval times by 30%.
-                  <br />
-                  - Managed and optimized MongoDB databases, ensuring data
-                  integrity and high availability.
-                  <br />
-                  - Collaborated with a team of developers in an Agile
-                  environment, contributing to the successful launch of three
-                  major features.
-                </li>
-              </ul>
-            </div>
-
-            <div class="tab-contents" id="education">
-              <ul>
-                <li>
-                  <span
-                    >B.S. in Computer Science – Ripah University (2025 -
-                    2029)</span
-                  >
-                  <br />
-                  - Specialized in Full-Stack Web Development and Software
-                  Engineering.
-                  <br />
-                  - Key coursework: Advanced Algorithms, Database Systems, and
-                  Web Application Development.
-                  <br />
-                  - Dean's List recipient for academic excellence.
-                </li>
-                <li>
-                  <span
-                    >Intermediate in Computer Science (ICS) – Aspire Group of
-                    Colleges, Lahore (2023 - 2025)</span
-                  >
-                  <br />
-                  - Graduated with honors, excelling in Computer Science,
-                  Mathematics, and Physics.
-                  <br />
-                  - Developed a passion for programming and web development
-                  through various projects and coursework.
-                </li>
-              </ul>
-            </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span
+                  >B.S. in Computer Science – Ripah University (2025 -
+                  2029)</span
+                >
+                <br />
+                - Specialized in Full-Stack Web Development and Software
+                Engineering.
+                <br />
+                - Key coursework: Advanced Algorithms, Database Systems, and Web
+                Application Development.
+                <br />
+                - Dean's List recipient for academic excellence.
+              </li>
+              <li>
+                <span
+                  >Intermediate in Computer Science (ICS) – Aspire Group of
+                  Colleges, Lahore (2023 - 2025)</span
+                >
+                <br />
+                - Graduated with honors, excelling in Computer Science,
+                Mathematics, and Physics.
+                <br />
+                - Developed a passion for programming and web development
+                through various projects and coursework.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -221,70 +217,211 @@
         <h1 class="sub-title">MY WORK</h1>
         <div class="work-list">
           <div class="work">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-              alt="React Logo"
-              width="50"
-              height="50"
-            />
-            <div class="layer">
-              <h3>React Quiz App</h3>
+            <div class="work-img">
+              <img
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Finance App"
+              />
+            </div>
+            <div class="work-info">
+              <h3>Financy Buddy</h3>
               <p>
-                Developed an interactive <strong>quiz application</strong> using
-                <strong>ReactJS</strong> with global state management through
-                <strong>Context API</strong> and <strong>useReducer</strong>.
-                Added features like multiple-choice questions, scoring system,
-                high-score tracking, and countdown timer. Deployed on
-                <strong>Netlify</strong>.
+                A personal finance management application to help users manage
+                their finances effectively. It provides a clear overview of
+                financial health and assists with budgeting and tracking
+                expenses.
               </p>
-              <a href="https://react-quiz-by-ms.netlify.app/" target="_blank"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <div class="stack">
+                <strong>Technologies Used:</strong>
+                <div class="tech-logos">
+                  <div class="tech-logo" title="MongoDB">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg"
+                      alt="MongoDB"
+                    />
+                  </div>
+                  <div class="tech-logo" title="Express.js">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/express-109.svg"
+                      alt="Express.js"
+                    />
+                  </div>
+                  <div class="tech-logo" title="React">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
+                      alt="React"
+                    />
+                  </div>
+                  <div class="tech-logo" title="Node.js">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+                      alt="Node.js"
+                    />
+                  </div>
+                  <div class="tech-logo" title="Tailwind CSS">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+                      alt="Tailwind CSS"
+                    />
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://financybuddy.vercel.app"
+                target="_blank"
+                class="demo-link"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
             </div>
           </div>
 
           <div class="work">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-              alt="React Logo"
-              width="50"
-              height="50"
-            />
-            <div class="layer">
+            <div class="work-img">
+              <img
+                src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Quiz App"
+              />
+            </div>
+            <div class="work-info">
+              <h3>React Quiz App</h3>
+              <p>
+                Developed an interactive quiz application using ReactJS with
+                global state management through Context API and useReducer.
+                Features multiple-choice questions, scoring system, high-score
+                tracking, and countdown timer.
+              </p>
+              <div class="stack">
+                <strong>Technologies Used:</strong>
+                <div class="tech-logos">
+                  <div class="tech-logo" title="React">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
+                      alt="React"
+                    />
+                  </div>
+                  <div class="tech-logo" title="JavaScript">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+                      alt="JavaScript"
+                    />
+                  </div>
+                  <div class="tech-logo" title="CSS3">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/css-3.svg"
+                      alt="CSS3"
+                    />
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://react-quiz-by-ms.netlify.app/"
+                target="_blank"
+                class="demo-link"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <div class="work">
+            <div class="work-img">
+              <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Pizza App"
+              />
+            </div>
+            <div class="work-info">
               <h3>React Fast Pizza</h3>
               <p>
-                Built a pizza-ordering interface using
-                <strong>ReactJS</strong> with <strong>Redux Toolkit</strong> for
-                global state management and <strong>React Router</strong> for
-                client-side routing. Implemented dynamic menu fetching, cart
-                management, order tracking, and responsive layouts with
-                <strong>TailwindCSS</strong>.
+                Built a pizza-ordering interface using ReactJS with Redux
+                Toolkit for global state management and React Router for
+                client-side routing. Features dynamic menu fetching, cart
+                management, and order tracking.
               </p>
+              <div class="stack">
+                <strong>Technologies Used:</strong>
+                <div class="tech-logos">
+                  <div class="tech-logo" title="React">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
+                      alt="React"
+                    />
+                  </div>
+                  <div class="tech-logo" title="Redux">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/redux.svg"
+                      alt="Redux"
+                    />
+                  </div>
+                  <div class="tech-logo" title="React Router">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/react-router.svg"
+                      alt="React Router"
+                    />
+                  </div>
+                  <div class="tech-logo" title="Tailwind CSS">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+                      alt="Tailwind CSS"
+                    />
+                  </div>
+                </div>
+              </div>
               <a
                 href="https://react-fast-pizza-by-ms.netlify.app/"
                 target="_blank"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+                class="demo-link"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
             </div>
           </div>
 
           <div class="work">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
-              alt="JavaScript Logo"
-              width="50"
-              height="50"
-            />
-            <div class="layer">
-              <h3>Bankist website</h3>
+            <div class="work-img">
+              <img
+                src="https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Bankist Website"
+              />
+            </div>
+            <div class="work-info">
+              <h3>Bankist Website</h3>
               <p>
-                This is the official website of Bankist. Although a
-                re-implementation, it required deep knowledge in DOM
-                manipulation and JS logic.
+                A modern banking website with advanced DOM manipulation and
+                JavaScript logic. Features smooth scrolling, tabbed components,
+                and responsive design for optimal user experience.
               </p>
-              <a href="https://bankist-app-rebuild.netlify.app/" target="_blank"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <div class="stack">
+                <strong>Technologies Used:</strong>
+                <div class="tech-logos">
+                  <div class="tech-logo" title="JavaScript">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+                      alt="JavaScript"
+                    />
+                  </div>
+                  <div class="tech-logo" title="HTML5">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/html-1.svg"
+                      alt="HTML5"
+                    />
+                  </div>
+                  <div class="tech-logo" title="CSS3">
+                    <img
+                      src="https://cdn.worldvectorlogo.com/logos/css-3.svg"
+                      alt="CSS3"
+                    />
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://bankist-app-rebuild.netlify.app/"
+                target="_blank"
+                class="demo-link"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
             </div>
           </div>
         </div>
@@ -305,7 +442,7 @@
             <p><i class="fa-solid fa-phone"></i> 0313-4424048</p>
             <div class="social-icons">
               <a href="https://x.com/MrSheikho0o" target="_blank"
-                ><i class="fa-brands fa-twitter-square"></i
+                ><i class="fa-brands fa-twitter"></i
               ></a>
               <a
                 href="https://www.instagram.com/mrsheikho_06/?utm_source=ig_web_button_share_sheet"
@@ -315,7 +452,7 @@
               <a
                 href="https://www.linkedin.com/in/ahmad-aamir-5b210a371/"
                 target="_blank"
-                ><i class="fab fa-linkedin"></i
+                ><i class="fab fa-linkedin-in"></i
               ></a>
               <a href="https://github.com/ahmad-006" target="_blank"
                 ><i class="fab fa-github"></i
@@ -336,7 +473,9 @@
           </div>
         </div>
         <span id="msg">
-          <a href="/adittional files/cv.pdf" download>GET RESUME</a>
+          <a href="/adittional files/cv.pdf" download class="resume-link">
+            <i class="fa-solid fa-download"></i> GET RESUME
+          </a>
         </span>
       </div>
       <div class="copyright">
@@ -374,7 +513,7 @@
       }
 
       function closemenu() {
-        sidemenu.style.right = "-20rem";
+        sidemenu.style.right = "-200px";
       }
     </script>
 
