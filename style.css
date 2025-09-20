@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap");
+
+/***** NAVBAR *****/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #000;
+  color: #fff;
+}
+.container {
+  padding: 1rem 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  /* height: 20vh; */
+  width: 14rem;
+}
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/home.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.logo {
+  width: 10rem;
+}
+#header ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 1rem 2rem;
+
+  & a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: white;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 3px;
+      background-color: #c8ff00;
+      transition: 0.3s linear;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+#header ul li a:hover::after {
+  width: 100%;
+}
+
+/***** End NAVBAR *****/
+
+/***** Hero Section *****/
+.main-heading {
+  text-transform: capitalize;
+  margin-top: 10%;
+  font-size: 3rem;
+  font-variant: small-caps;
+  margin-left: 2rem;
+
+  & p {
+    color: #fff;
+    margin-bottom: 0;
+  }
+  & h1 {
+    margin-top: 1rem;
+    font-size: 6rem;
+  }
+}
+h1 span {
+  color: #c8ff00;
+}
+.about-me {
+  max-width: 900px;
+}
+
+/***** End Hero Section *****/
+
+/***** ABOUT *****/
+
+#about {
+  padding: 69px 0;
+  color: #ababab;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col--1 {
+  flex-basis: 35%;
+}
+.about-col--1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  background-color: #ababab;
+}
+.about-col--2 {
+  flex-basis: 60%;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 5rem;
+    color: #fff;
+  }
+  & p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: capitalize;
+  }
+}
+.tab-titles {
+  display: flex;
+  gap: 50px;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #777777;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background-color: #c8ff00;
+    transition: 0.3s linear;
+  }
+
+  &.active-link::after {
+    width: 70%;
+  }
+}
+
+.tab-contents ul li {
+  list-style-type: none;
+  margin: 1rem 0;
+
+  & span {
+    color: #c8ff00;
+    font-size: 1.8rem;
+  }
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+/* **** End ABOUT **** */
+
+/***** Services *****/
+#services {
+  padding: 20px 0;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 5rem;
+    color: #fff;
+  }
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin: 50px 0 0 0;
+
+  & div {
+    background: #262626;
+    padding: 40px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border-right: 1.8rem;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: #87a31f;
+      transform: translateY(-15px);
+    }
+    & i {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+    }
+    & h2 {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+/***** End Services *****/
+
+/***** PORTFOLIO *****/
+
+#portfolio {
+  padding: 5rem 0;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 5rem;
+    color: #fff;
+  }
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin: 50px 0 0 0;
+
+  & .work {
+    border-radius: 1.8rem;
+    position: relative;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 50vh;
+      border-radius: 1.8rem;
+      display: block;
+      transition: 0.5s;
+    }
+
+    & .layer {
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), #87a31f);
+      border-radius: 1rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 4rem;
+      text-align: center;
+      font-size: 1.4rem;
+      transition: 0.5s;
+
+      & h3 {
+        font-weight: 500;
+        margin: 20px;
+      }
+      & a {
+        margin: 2rem 0 0 0;
+        color: #c8ff00;
+        font-size: 1.8rem;
+        line-height: 6rem;
+        text-decoration: none;
+        background: white;
+        width: 6rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.work:hover {
+  & img {
+    scale: 1.1;
+    border-radius: 1.8rem;
+  }
+  & .layer {
+    height: 100%;
+  }
+}
+.btn {
+  display: block;
+  margin: 5rem auto;
+  width: fit-content;
+  border: 0.1rem solid #c8ff00;
+  padding: 1.4rem 5rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+
+  &:hover {
+    background: #c8ff0096;
+  }
+}
+/***** End PORTFOLIO *****/
+
+/***** Contact *****/
+
+.contact-left {
+  flex-basis: 35%;
+
+  & p {
+    margin: 3rem 0 0 0;
+
+    & i {
+      margin-right: 1.5rem;
+      color: #c8ff00;
+      font-size: 2.5rem;
+    }
+  }
+
+  & h1 {
+    font-size: 50px;
+  }
+}
+
+.contact-right {
+  flex-basis: 60%;
+
+  & form {
+    width: 100%;
+
+    & input,
+    textarea {
+      width: 100%;
+      border: 0;
+      outline: none;
+      background: #262626;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #fff;
+      font-size: 1.8rem;
+      border-radius: 0.6rem;
+    }
+    & .btn2 {
+      padding: 1.4rem 1.6rem;
+      cursor: pointer;
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      background-color: #c8ff00bb;
+    }
+  }
+}
+.social-icons {
+  margin-top: 3rem;
+
+  & a {
+    text-decoration: none;
+    font-size: 3rem;
+    color: #ababab;
+    margin-right: 1.5rem;
+    display: inline-block;
+    transition: 0.5s;
+
+    &:hover {
+      color: #c8ff00;
+      transform: translateY(-0.5rem);
+    }
+  }
+}
+.btn.bt2 {
+  display: inline-block;
+  background-color: #c8ff00;
+}
+
+span#msg {
+  font-size: 2rem;
+  & a {
+    text-decoration: none;
+    color: #c8ff00;
+
+    &:hover {
+      color: #45540f;
+    }
+  }
+}
+/***** End Contact *****/
+
+/***** CopyRight *****/
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  padding: 1.3rem o;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 2rem;
+
+  & i {
+    color: #c8ff00;
+  }
+}
+
+/***** End CopyRight *****/
+
+/***** Making Responsive *****/
+#header .container .fa-solid {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  #header {
+    /* background-image: url(/images/Phone-pic.jpg); */
+    background-image: url(/images/home-mob.jpg);
+    background-position: right;
+    background-size: contain;
+    /* position: relative; */
+
+    & img {
+      height: auto;
+      width: 20vw;
+    }
+  }
+  .main-heading {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin: 80% 2%;
+    font-variant: small-caps;
+
+    & p {
+      color: #ffffff;
+      margin-bottom: 0;
+    }
+    & h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+  #header .container .fa-solid {
+    display: block;
+    font-size: 2.5rem;
+  }
+  nav ul {
+    background: #1c1cf7;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    width: 20rem;
+    height: 100vh;
+    padding-top: 5rem;
+    z-index: 2;
+    transition: 0.5s linear;
+  }
+  #header nav ul li {
+    display: block;
+    margin: 2.5rem;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    cursor: pointer;
+  }
+  .about-col--1,
+  .about-col--2 {
+    flex-basis: 100%;
+  }
+}
+.about-col--2 {
+  & h1 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+  }
+  & p {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: capitalize;
+  }
+}
+.contact-left,
+.contact-right {
+  flex-basis: 100%;
+}
+
+/***** End Making Responsive *****/

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body Styles */
+      body {
+        background-color: #302761cb;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Container Styles */
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #000000c2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Display Time Styles */
+      #displayTime {
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      /* Button Container Styles */
+      #btnContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Button Row Styles */
+      .btn-row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      /* Button Styles */
+      button {
+        width: 40%;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        margin: 0 10px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* Button Hover Styles */
+      button:hover {
+        background-color: #3e8e41;
+      }
+
+      /* Timer Section Styles */
+      p {
+        text-align: center;
+        color: #910808;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CLOCK CONTAINER -->
+
+    <div class="container">
+      <p id="displayTime">0</p>
+
+      <!-- button container -->
+
+      <div id="btnContainer">
+        <!-- BUTTONS -->
+
+        <!-- row one -->
+
+        <div class="btn-row">
+          <button class="start">START</button>
+          <button class="stop">STOP</button>
+        </div>
+
+        <!-- row two -->
+
+        <div class="btn-row">
+          <button class="reset">RESET</button>
+          <button class="getTime">getTime</button>
+        </div>
+
+        <!-- row three -->
+
+        <div class="btn-row">
+          <button class="clearTime">clearTime</button>
+        </div>
+      </div>
+      <div class="timerSection"></div>
+    </div>
+    <script>
+      // STORING HTML ELEMENTS IN VARIABLES
+
+      let countPara = document.querySelector("#displayTime");
+      let startBtn = document.querySelector(".start");
+      let stopBtn = document.querySelector(".stop");
+      let resetBtn = document.querySelector(".reset");
+      let clearTimeBtn = document.querySelector(".clearTime");
+      let getTimeBtn = document.querySelector(".getTime");
+      let timerSection = document.querySelector(".timerSection");
+      let timer = parseInt(localStorage.getItem("timer")) || 0;
+      let intervalId;
+
+      // FUNCTION TO START TIMER
+
+      const startTime = () => {
+        intervalId = setInterval(() => {
+          countPara.innerHTML = timer++;
+          localStorage.setItem("timer", timer);
+        }, 1000);
+      };
+
+      // FUNCTION TO DISPLAY CURRENT TIME ON SCREEN
+
+      const getTime = () => {
+        let stopTimeText = document.createElement("p");
+        stopTimeText.innerText = `Stop Time is ${timer - 1}`;
+        timerSection.append(stopTimeText);
+      };
+
+      // FUNCTION TO STOP TIMER
+
+      const stopTime = () => {
+        clearInterval(intervalId);
+        getTime();
+      };
+
+      // FUNCTION TO reset TIMER
+
+      const resetTime = () => {
+        timer = 0;
+        countPara.innerHTML = 0;
+        clearInterval(intervalId);
+        localStorage.removeItem("timer");
+      };
+
+      // FUNCTION TO CLEAR DISPLAYED TIME
+
+      const clearTime = () => {
+        timerSection.innerHTML = "";
+      };
+
+      //ADDING EVENT LISTENER TO BUTTONS
+
+      startBtn.addEventListener("click", () => {
+        startTime();
+      });
+      stopBtn.addEventListener("click", () => {
+        stopTime();
+      });
+      resetBtn.addEventListener("click", () => {
+        resetTime();
+      });
+      getTimeBtn.addEventListener("click", () => {
+        getTime();
+      });
+      clearTimeBtn.addEventListener("click", () => {
+        clearTime();
+      });
+
+      // Initialize display time
+
+      countPara.innerHTML = timer;
+
+      // Check if timer was running previously
+
+      if (localStorage.getItem("running") === "true") {
+        startTime();
+      }
+
+      // Store running state
+
+      startBtn.addEventListener("click", () => {
+        localStorage.setItem("running", "true");
+      });
+      stopBtn.addEventListener("click", () => {
+        localStorage.setItem("running", "false");
+      });
+      resetBtn.addEventListener("click", () => {
+        localStorage.setItem("running", "false");
+      });
+    </script>
+  </body>
+</html>
