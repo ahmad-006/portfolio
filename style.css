@@ -58,7 +58,7 @@ nav {
       bottom: -6px;
       width: 0;
       height: 3px;
-      background-color: #c8ff00;
+      background-color: #64ffda;
       transition: 0.3s linear;
     }
     &:hover::after {
@@ -90,7 +90,7 @@ nav {
   }
 }
 h1 span {
-  color: #c8ff00;
+  color: #64ffda;
 }
 .about-me {
   max-width: 900px;
@@ -116,7 +116,8 @@ h1 span {
   width: 100%;
   height: auto;
   border-radius: 15px;
-  background-color: #ababab;
+  border: 2px solid #64ffda;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
 }
 .about-col--2 {
   flex-basis: 60%;
@@ -128,9 +129,8 @@ h1 span {
   }
   & p {
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #fff;
-    text-transform: capitalize;
   }
 }
 .tab-titles {
@@ -152,7 +152,7 @@ h1 span {
     bottom: -6px;
     width: 0;
     height: 3px;
-    background-color: #c8ff00;
+    background-color: #64ffda;
     transition: 0.3s linear;
   }
 
@@ -164,9 +164,11 @@ h1 span {
 .tab-contents ul li {
   list-style-type: none;
   margin: 1rem 0;
+  font-size: 1.6rem;
+  line-height: 1.6;
 
   & span {
-    color: #c8ff00;
+    color: #64ffda;
     font-size: 1.8rem;
   }
 }
@@ -197,14 +199,15 @@ h1 span {
   & div {
     background: #262626;
     padding: 40px;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 300;
     border-right: 1.8rem;
     transition: 0.5s;
 
     &:hover {
-      background-color: #87a31f;
+      background-color: #00bfa5;
       transform: translateY(-15px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     & i {
       font-size: 5rem;
@@ -241,6 +244,7 @@ h1 span {
     border-radius: 1.8rem;
     position: relative;
     overflow: hidden;
+    transition: transform 0.5s, box-shadow 0.5s;
 
     & img {
       width: 100%;
@@ -253,7 +257,7 @@ h1 span {
     & .layer {
       width: 100%;
       height: 0;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), #87a31f);
+      background: linear-gradient(rgba(0, 0, 0, 0.6), #00bfa5);
       border-radius: 1rem;
       position: absolute;
       left: 0;
@@ -265,7 +269,7 @@ h1 span {
       flex-direction: column;
       padding: 0 4rem;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       transition: 0.5s;
 
       & h3 {
@@ -274,7 +278,7 @@ h1 span {
       }
       & a {
         margin: 2rem 0 0 0;
-        color: #c8ff00;
+        color: #64ffda;
         font-size: 1.8rem;
         line-height: 6rem;
         text-decoration: none;
@@ -289,6 +293,8 @@ h1 span {
 }
 
 .work:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   & img {
     scale: 1.1;
     border-radius: 1.8rem;
@@ -301,15 +307,19 @@ h1 span {
   display: block;
   margin: 5rem auto;
   width: fit-content;
-  border: 0.1rem solid #c8ff00;
+  background: #64ffda;
   padding: 1.4rem 5rem;
   border-radius: 0.6rem;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   transition: 0.5s;
+  border: 0.1rem solid #64ffda;
+  font-size: 1.8rem;
+  font-weight: 500;
 
   &:hover {
-    background: #c8ff0096;
+    background: #00bfa5;
+    color: #fff;
   }
 }
 /***** End PORTFOLIO *****/
@@ -324,7 +334,7 @@ h1 span {
 
     & i {
       margin-right: 1.5rem;
-      color: #c8ff00;
+      color: #64ffda;
       font-size: 2.5rem;
     }
   }
@@ -357,7 +367,7 @@ h1 span {
       cursor: pointer;
       margin-top: 2rem;
       font-size: 1.8rem;
-      background-color: #c8ff00bb;
+      background-color: rgba(100, 255, 218, 0.7);
     }
   }
 }
@@ -373,24 +383,24 @@ h1 span {
     transition: 0.5s;
 
     &:hover {
-      color: #c8ff00;
+      color: #64ffda;
       transform: translateY(-0.5rem);
     }
   }
 }
 .btn.bt2 {
   display: inline-block;
-  background-color: #c8ff00;
+  background-color: #64ffda;
 }
 
 span#msg {
   font-size: 2rem;
   & a {
     text-decoration: none;
-    color: #c8ff00;
+    color: #64ffda;
 
     &:hover {
-      color: #45540f;
+      color: #008c7a;
     }
   }
 }
@@ -411,7 +421,7 @@ span#msg {
   margin-top: 2rem;
 
   & i {
-    color: #c8ff00;
+    color: #64ffda;
   }
 }
 
@@ -490,7 +500,7 @@ span#msg {
     font-weight: 300;
     font-size: 1rem;
     color: #fff;
-    text-transform: capitalize;
+    text-.transform: capitalize;
   }
 }
 .contact-left,
