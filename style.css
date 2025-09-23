@@ -25,9 +25,9 @@ body {
 }
 
 .container {
-  /* padding: 1rem 10%; */
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Header  */
@@ -46,6 +46,7 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2rem 0;
+  position: relative;
 }
 
 .logo {
@@ -91,6 +92,18 @@ nav {
   width: 100%;
 }
 
+/* Mobile menu icon */
+nav .fa-bars {
+  display: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+nav .fa-xmark {
+  display: none;
+}
+
 /* Improved Hero Section */
 .main-heading {
   margin-top: 15%;
@@ -123,6 +136,24 @@ nav {
   max-width: 600px;
 }
 
+.cv-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 30px;
+  background: transparent;
+  color: var(--primary-color);
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.cv-btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-2px);
+}
+
 /* Improved About Section */
 #about {
   padding: 8rem 0;
@@ -133,6 +164,25 @@ nav {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+}
+
+.personal-info {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.personal-info p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  display: inline-block;
+  margin-right: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.personal-info p strong {
+  color: var(--primary-color);
 }
 
 .sub-title {
@@ -273,25 +323,8 @@ nav {
 }
 
 /* PORTFOLIO */
-
-.sub-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #64ffda;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.sub-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: #64ffda;
+#portfolio {
+  padding: 8rem 0;
 }
 
 .work-list {
@@ -427,19 +460,15 @@ nav {
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  .work-list {
-    grid-template-columns: 1fr;
-  }
-
-  .sub-title {
-    font-size: 2rem;
-  }
-}
-
 /* Improved Contact */
 #contact {
   padding: 8rem 0 3rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contact-left {
@@ -452,6 +481,7 @@ nav {
 
 .contact-left p {
   margin-top: 30px;
+  font-size: 1.6rem;
 }
 
 .contact-left p i {
@@ -490,6 +520,7 @@ nav {
   border: none;
   cursor: pointer;
   transition: all 0.3s;
+  margin-top: 20px;
 }
 
 .btn.btn2:hover {
@@ -529,20 +560,6 @@ form textarea:focus {
   font-size: 1.6rem;
 }
 
-#msg a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: gap 0.3s;
-}
-
-#msg a:hover {
-  gap: 12px;
-}
-
 .copyright {
   width: 100%;
   text-align: center;
@@ -558,10 +575,6 @@ form textarea:focus {
 }
 
 /* Mobile Responsiveness */
-#header .fa-solid {
-  display: none;
-}
-
 @media only screen and (max-width: 900px) {
   #header {
     background:
@@ -587,13 +600,10 @@ form textarea:focus {
     font-size: 4.5rem;
   }
 
-  .header-text {
-    margin-top: 100%;
-  }
-
-  nav .fa-solid {
+  /* Mobile menu */
+  nav .fa-bars {
     display: block;
-    font-size: 2.5rem;
+    z-index: 100;
   }
 
   nav ul {
@@ -604,7 +614,7 @@ form textarea:focus {
     width: 200px;
     height: 100vh;
     padding-top: 50px;
-    z-index: 2;
+    z-index: 99;
     transition: right 0.5s;
   }
 
@@ -613,21 +623,30 @@ form textarea:focus {
     margin: 25px;
   }
 
-  nav ul .fa-solid {
+  nav ul .fa-xmark {
+    display: block;
     position: absolute;
     top: 25px;
     left: 25px;
     cursor: pointer;
+    font-size: 2.4rem;
+    color: var(--text-color);
   }
 
-  .about-col--1,
-  .about-col--2 {
-    flex-basis: 100%;
+  .row {
+    flex-direction: column;
   }
 
   .contact-left,
   .contact-right {
     flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .personal-info p {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -646,6 +665,7 @@ form textarea:focus {
 
   .tab-titles {
     gap: 20px;
+    flex-wrap: wrap;
   }
 
   .tab-links {
@@ -654,5 +674,9 @@ form textarea:focus {
 
   .copyright {
     font-size: 1.4rem;
+  }
+
+  .work-list {
+    grid-template-columns: 1fr;
   }
 }
