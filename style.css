@@ -106,21 +106,21 @@ nav .fa-xmark {
 
 /* Improved Hero Section */
 .main-heading {
-  margin-top: 15%;
-  font-size: 2.5rem;
+  margin-top: 20%;
+  font-size: 3rem;
   max-width: 600px;
 }
 
 .sub-heading {
   color: var(--primary-color);
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
 
 .heading {
   margin: 1rem 0;
-  font-size: 5.5rem;
+  font-size: 6rem;
   line-height: 1.2;
 }
 
@@ -456,7 +456,8 @@ nav .fa-xmark {
 }
 
 .btn:hover {
-  background: rgba(100, 255, 218, 0.1);
+  background: var(--primary-color);
+  color: var(--secondary-color);
   transform: translateY(-2px);
 }
 
@@ -583,9 +584,11 @@ form textarea:focus {
   }
 
   .main-heading {
-    margin-top: 40%;
+    margin-top: 20%;
     text-align: center;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about-me {
@@ -603,6 +606,7 @@ form textarea:focus {
   /* Mobile menu */
   nav .fa-bars {
     display: block;
+    position: relative;
     z-index: 100;
   }
 
@@ -614,11 +618,11 @@ form textarea:focus {
     width: 200px;
     height: 100vh;
     padding-top: 50px;
-    z-index: 99;
+    z-index: 999;
     transition: right 0.5s;
   }
 
-  nav ul li {
+  #header ul li {
     display: block;
     margin: 25px;
   }
@@ -627,10 +631,11 @@ form textarea:focus {
     display: block;
     position: absolute;
     top: 25px;
-    left: 25px;
+    right: 25px;
     cursor: pointer;
     font-size: 2.4rem;
     color: var(--text-color);
+    z-index: 1000;
   }
 
   .row {
@@ -653,6 +658,10 @@ form textarea:focus {
 @media only screen and (max-width: 600px) {
   .container {
     padding: 1rem 5%;
+  }
+
+  .main-heading {
+    margin-top: 15%;
   }
 
   .sub-title {

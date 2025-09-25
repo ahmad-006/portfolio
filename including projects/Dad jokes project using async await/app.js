@@ -1,3 +1,5 @@
+const { log } = require("node:console");
+
 const jokeSection = document.querySelector(".jokes");
 const copyButton = document.querySelector(".copy");
 
@@ -11,6 +13,7 @@ const handleJokes = () => {
           Accept: "application/json",
         },
       });
+      console.log(response);
       const data = await response.json();
       jokeSection.textContent = data.joke;
     } catch (error) {
