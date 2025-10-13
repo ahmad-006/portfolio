@@ -9,14 +9,14 @@
     />
     <meta
       name="keywords"
-      content="web development, frontend developer, HTML, CSS, JavaScript, UI/UX design, portfolio"
+      content="web development, frontend developer, HTML, CSS, JavaScript, React, Next.js, Node.js, MERN Stack, portfolio"
     />
     <meta name="author" content="Ahmad Aamir" />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="MrSheikho - Web Developer Portfolio" />
     <meta
       property="og:description"
-      content="Discover the portfolio of Ahmad Aamir, a web developer skilled in HTML, CSS, and JavaScript. Explore projects and services."
+      content="Discover the portfolio of Ahmad Aamir, a web developer skilled in the MERN stack. Explore projects and services."
     />
     <meta property="og:image" content="/images/logo.png" />
     <meta property="og:url" content="https://www.mrsheikho.com" />
@@ -32,11 +32,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- ========== Start Header ========== -->
     <div id="header">
       <div class="container">
         <nav>
@@ -53,8 +52,7 @@
         </nav>
       </div>
 
-      <!-- ========== End Header ========== -->
-      <!--? ========== Start Hero Section ========== -->
+      <!-- HERO SECTION -->
 
       <div class="container">
         <div class="main-heading">
@@ -71,133 +69,214 @@
         </div>
       </div>
     </div>
-    <!--? ========== End Hero Section ========== -->
 
-    <!-- ========== Start ABOUT ========== -->
+    <!-- ABOUT ME -->
     <div id="about">
       <div class="container">
-        <div class="about-details">
-          <h1 class="sub-title">ABOUT ME</h1>
-          <div class="personal-info">
-            <p><strong>Age:</strong> 19 years</p>
-            <p><strong>Location:</strong> Lahore, Pakistan</p>
-            <p><strong>Experience:</strong> 6 months of focused coding</p>
-            <p><strong>Specialization:</strong> MERN Stack Development</p>
-          </div>
+        <h1 class="sub-title">ABOUT ME</h1>
 
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">
-              SKILLS
+        <div class="about-grid">
+          <section class="about-card">
+            <h3 class="about-h3">Who I Am</h3>
+            <p class="about-copy">
+              A passionate MERN stack developer from Lahore, Pakistan, focused
+              on building high‑performance, scalable, and user‑friendly web
+              applications. I enjoy turning complex problems into simple,
+              beautiful UIs and robust APIs.
             </p>
-            <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
-            <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
-          </div>
 
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li>
-                <span>Full-Stack Development</span>
-                Proficient in the MERN stack, with a strong understanding of
-                both front-end and back-end development. Experienced in building
-                complete web applications from concept to deployment.
-              </li>
-              <li>
-                <span>Front-End</span>
-                Expert in React.js for building dynamic and responsive user
-                interfaces. Skilled in state management with Redux and Context
-                API, and experienced with modern front-end tools like Webpack
-                and Babel.
-              </li>
-              <li>
-                <span>Back-End</span>
-                Adept at building robust and scalable RESTful APIs with Node.js
-                and Express.js. Experienced in user authentication, data
-                validation, and middleware implementation.
-              </li>
-              <li>
-                <span>Databases</span>
-                Skilled in designing and managing NoSQL databases with MongoDB
-                and Mongoose. Experienced in data modeling, indexing, and
-                aggregation pipelines for optimal performance.
-              </li>
-            </ul>
-          </div>
+            <div class="quick-stats">
+              <div class="stat">
+                <i class="fa-solid fa-user"></i>
+                <div>
+                  <span class="stat-label">Age</span>
+                  <span class="stat-value">21</span>
+                </div>
+              </div>
+              <div class="stat">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span class="stat-label">Location</span>
+                  <span class="stat-value">Lahore, Pakistan</span>
+                </div>
+              </div>
+              <div class="stat">
+                <i class="fa-solid fa-briefcase"></i>
+                <div>
+                  <span class="stat-label">Experience</span>
+                  <span class="stat-value">1+ year (MERN)</span>
+                </div>
+              </div>
+              <div class="stat">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                  <span class="stat-label">Specialization</span>
+                  <span class="stat-value">MERN Stack Development</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li>
-                <span
-                  >MERN Stack Development Intern – IIFA TECH (July 2025 -
-                  Present)</span
-                >
-                <br />
-                - Developed and maintained responsive user interfaces using
-                React.js, resulting in a 20% increase in user engagement.
-                <br />
-                - Built and integrated RESTful APIs using Node.js and
-                Express.js, improving data retrieval times by 30%.
-                <br />
-                - Managed and optimized MongoDB databases, ensuring data
-                integrity and high availability.
-                <br />
-                - Collaborated with a team of developers in an Agile
-                environment, contributing to the successful launch of three
-                major features.
-              </li>
-              <li>
-                <span>Freelance Web Developer (Jan 2025 - Present)</span>
-                <br />
-                - Developed responsive websites for local businesses in Lahore
-                <br />
-                - Gained practical experience in client communication and
-                project delivery
-              </li>
-            </ul>
-          </div>
+            <div class="about-cta">
+              <a href="./files/cv.pdf" class="btn btn2">
+                <i class="fa-solid fa-download"></i> Download CV
+              </a>
+            </div>
+          </section>
 
-          <div class="tab-contents" id="education">
-            <ul>
-              <li>
-                <span
-                  >B.S. in Computer Science – Ripah University (2025 -
-                  2029)</span
-                >
-                <br />
-                - Specialized in Full-Stack Web Development and Software
-                Engineering.
-                <br />
-                - Key coursework: Advanced Algorithms, Database Systems, and Web
-                Application Development.
-                <br />
-                - Dean's List recipient for academic excellence.
-              </li>
-              <li>
-                <span
-                  >Intermediate in Computer Science (ICS) – Aspire Group of
-                  Colleges, Lahore (2023 - 2025)</span
-                >
-                <br />
-                - Graduated with honors, excelling in Computer Science,
-                Mathematics, and Physics.
-                <br />
-                - Developed a passion for programming and web development
-                through various projects and coursework.
-              </li>
-              <li>
-                <span>Online Courses & Self-Learning (2024 - Present)</span>
-                <br />
-                - Completed multiple MERN stack development courses
-                <br />
-                - Regular participant in coding challenges and hackathons
-              </li>
-            </ul>
-          </div>
+          <!-- Skill Matrix -->
+          <section class="skills-card">
+            <h3 class="about-h3">Skill Matrix</h3>
+
+            <div class="skills-columns">
+              <div class="skill-pillar">
+                <h4>Frontend</h4>
+                <div class="chip-list">
+                  <span class="skill-chip emphasis">Next.js</span>
+                  <span class="skill-chip">React</span>
+                  <span class="skill-chip">Redux Toolkit</span>
+                  <span class="skill-chip">Context API</span>
+                  <span class="skill-chip">React Router</span>
+                  <span class="skill-chip">Tailwind CSS</span>
+                  <span class="skill-chip">HTML5</span>
+                  <span class="skill-chip">CSS3</span>
+                  <span class="skill-chip">JavaScript (ES6+)</span>
+                  <span class="skill-chip">Webpack</span>
+                  <span class="skill-chip">Babel</span>
+                </div>
+              </div>
+
+              <div class="skill-pillar">
+                <h4>Backend</h4>
+                <div class="chip-list">
+                  <span class="skill-chip">Node.js</span>
+                  <span class="skill-chip">Express.js</span>
+                  <span class="skill-chip">REST APIs</span>
+                  <span class="skill-chip">Authentication (JWT)</span>
+                  <span class="skill-chip">Validation &amp; Middleware</span>
+                </div>
+              </div>
+
+              <div class="skill-pillar">
+                <h4>Database</h4>
+                <div class="chip-list">
+                  <span class="skill-chip">MongoDB</span>
+                  <span class="skill-chip">Mongoose</span>
+                  <span class="skill-chip">Schema Design</span>
+                  <span class="skill-chip">Indexing</span>
+                  <span class="skill-chip">Aggregation Pipelines</span>
+                </div>
+              </div>
+
+              <div class="skill-pillar">
+                <h4>Tools &amp; Dev</h4>
+                <div class="chip-list">
+                  <span class="skill-chip">Git &amp; GitHub</span>
+                  <span class="skill-chip">Postman</span>
+                  <span class="skill-chip">Vercel</span>
+                  <span class="skill-chip">Netlify</span>
+                  <span class="skill-chip">NPM</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="resume-grid">
+          <section class="resume-col">
+            <h3 class="about-h3">Experience</h3>
+
+            <article class="resume-item">
+              <header class="resume-item__head">
+                <h4>MERN Stack Development Intern — IIFA TECH</h4>
+                <span class="resume-item__meta">May 2025 – Present</span>
+              </header>
+              <ul class="resume-bullets">
+                <li>
+                  Built responsive interfaces with React, increasing engagement
+                  by <strong>20%</strong>.
+                </li>
+                <li>
+                  Developed RESTful APIs with Node &amp; Express, improving data
+                  retrieval by <strong>30%</strong>.
+                </li>
+                <li>
+                  Managed and optimized MongoDB for integrity and high
+                  availability.
+                </li>
+                <li>
+                  Contributed in Agile teams to launch three major features.
+                </li>
+              </ul>
+            </article>
+
+            <article class="resume-item">
+              <header class="resume-item__head">
+                <h4>Freelance</h4>
+                <span class="resume-item__meta">Jan 2025 – Present</span>
+              </header>
+              <ul class="resume-bullets">
+                <li>
+                  Delivered responsive websites for local businesses in Lahore.
+                </li>
+                <li>
+                  Hands‑on client communication and end‑to‑end project delivery.
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="resume-col">
+            <h3 class="about-h3">Education</h3>
+
+            <article class="resume-item">
+              <header class="resume-item__head">
+                <h4>B.S. in Computer Science — Ripah University</h4>
+                <span class="resume-item__meta">2023 – 2027</span>
+              </header>
+              <ul class="resume-bullets">
+                <li>
+                  Focus: Full‑Stack Web Development &amp; Software Engineering.
+                </li>
+                <li>
+                  Key courses: Advanced Algorithms, Database Systems, Web App
+                  Development.
+                </li>
+                <li>Dean's List recipient for academic excellence.</li>
+              </ul>
+            </article>
+
+            <article class="resume-item">
+              <header class="resume-item__head">
+                <h4>ICS — Aspire Group of Colleges, Lahore</h4>
+                <span class="resume-item__meta">2021 – 2023</span>
+              </header>
+              <ul class="resume-bullets">
+                <li>Honors in Computer Science, Mathematics, and Physics.</li>
+                <li>
+                  Early projects ignited passion for programming &amp; the web.
+                </li>
+              </ul>
+            </article>
+
+            <article class="resume-item">
+              <header class="resume-item__head">
+                <h4>Online Courses &amp; Self‑Learning</h4>
+                <span class="resume-item__meta">2024 – Present</span>
+              </header>
+              <ul class="resume-bullets">
+                <li>
+                  Completed multiple MERN‑stack courses; regular challenges
+                  &amp; hackathons.
+                </li>
+              </ul>
+            </article>
+          </section>
         </div>
       </div>
     </div>
-    <!-- ========== End ABOUT ========== -->
 
-    <!-- ========== Start Services ========== -->
+    <!-- SERVICES -->
+
     <div id="services">
       <div class="container">
         <h1 class="sub-title">My Services</h1>
@@ -206,9 +285,9 @@
             <i class="fa-brands fa-react"></i>
             <h2>Frontend Development</h2>
             <p>
-              Building responsive and dynamic user interfaces with React.js,
-              focusing on component-based architecture and state management to
-              create seamless user experiences.
+              Building responsive and dynamic user interfaces with React.js &
+              Next.js, focusing on component-based architecture and state
+              management to create seamless user experiences.
             </p>
           </div>
 
@@ -233,19 +312,17 @@
         </div>
       </div>
     </div>
-    <!-- ========== End Services ========== -->
 
-    <!-- ========== Start Portfolio ========== -->
+    <!-- PORTFOLIO -->
     <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">MY WORK</h1>
         <div class="work-list">
           <div class="work">
             <div class="work-img">
-              <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Finance App"
-              />
+              <a href="https://financybuddy.vercel.app" target="_blank">
+                <img src="./images/financybuddy.png" alt="Finance App" />
+              </a>
             </div>
             <div class="work-info">
               <h3>Financy Buddy</h3>
@@ -302,10 +379,9 @@
 
           <div class="work">
             <div class="work-img">
-              <img
-                src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Quiz App"
-              />
+              <a href="https://react-quiz-by-ms.netlify.app/" target="_blank">
+                <img src="./images/quiz.png" alt="Quiz App" />
+              </a>
             </div>
             <div class="work-info">
               <h3>React Quiz App</h3>
@@ -350,10 +426,12 @@
 
           <div class="work">
             <div class="work-img">
-              <img
-                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Pizza App"
-              />
+              <a
+                href="https://react-fast-pizza-by-ms.netlify.app/"
+                target="_blank"
+              >
+                <img src="./images/fastPizza.png" alt="Pizza App" />
+              </a>
             </div>
             <div class="work-info">
               <h3>React Fast Pizza</h3>
@@ -404,10 +482,12 @@
 
           <div class="work">
             <div class="work-img">
-              <img
-                src="https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Bankist Website"
-              />
+              <a
+                href="https://bankist-app-rebuild.netlify.app/"
+                target="_blank"
+              >
+                <img src="./images/bankist.png" alt="Bankist Website" />
+              </a>
             </div>
             <div class="work-info">
               <h3>Bankist Website</h3>
@@ -452,9 +532,8 @@
         <a href="./projects.html" class="btn">See More</a>
       </div>
     </div>
-    <!-- ========== End Portfolio ========== -->
 
-    <!-- ========== Start Contact Box ========== -->
+    <!-- CONTACT -->
     <div id="contact">
       <div class="container">
         <div class="row">
@@ -509,9 +588,6 @@
         </p>
       </div>
     </div>
-    <!-- ========== End Contact Box ========== -->
-
-    <!-- ========== Start JS ========== -->
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");

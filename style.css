@@ -1,9 +1,11 @@
 :root {
-  --primary-color: #64ffda;
-  --secondary-color: #0a192f;
-  --text-color: #ccd6f6;
-  --light-text: #8892b0;
-  --dark-bg: #020c1b;
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --text-color: #ffffff;
+  --light-text: #cccccc;
+  --dark-bg: #000000;
+  --card-bg: #111111;
+  --border-color: #333333;
 }
 
 * {
@@ -52,6 +54,7 @@ nav {
 .logo {
   width: 10rem;
   transition: transform 0.3s;
+  filter: invert(0.4);
 }
 
 .logo:hover {
@@ -104,7 +107,6 @@ nav .fa-xmark {
   display: none;
 }
 
-
 .main-heading {
   margin-top: 10%;
   font-size: 3rem;
@@ -126,6 +128,18 @@ nav .fa-xmark {
 
 .heading span {
   color: var(--primary-color);
+  position: relative;
+}
+
+.heading span::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
 }
 
 .about-me {
@@ -144,137 +158,186 @@ nav .fa-xmark {
   color: var(--primary-color);
   text-decoration: none;
   border: 1px solid var(--primary-color);
-  border-radius: 5px;
+  border-radius: 0;
   transition: all 0.3s ease;
   font-weight: 500;
 }
 
 .cv-btn:hover {
-  background: rgba(100, 255, 218, 0.1);
+  background: var(--primary-color);
+  color: var(--secondary-color);
   transform: translateY(-2px);
 }
 
-/*  About Section */
-#about {
-  padding: 8rem 0;
-  background-color: var(--secondary-color);
+/* ===== ABOUT (Modernized) ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 30px;
 }
 
-.about-details {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+.about-card,
+.skills-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
 }
 
-.personal-info {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.personal-info p {
-  font-size: 1.6rem;
-  margin: 1rem 0;
-  display: inline-block;
-  margin-right: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-
-.personal-info p strong {
-  color: var(--primary-color);
-}
-
-.sub-title {
-  font-weight: 600;
-  font-size: 4rem;
+.about-h3 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
   color: var(--text-color);
-  margin-bottom: 3rem;
-  position: relative;
-  display: inline-block;
 }
 
-.sub-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: var(--primary-color);
-}
-
-.tab-titles {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 30px 0;
-  border-bottom: 1px solid var(--light-text);
-}
-
-.tab-links {
-  font-size: 1.8rem;
-  font-weight: 500;
-  cursor: pointer;
+.about-copy {
   color: var(--light-text);
-  position: relative;
-  padding: 5px 0;
-  transition: color 0.3s;
-}
-
-.tab-links:hover {
-  color: var(--primary-color);
-}
-
-.tab-links.active-link {
-  color: var(--primary-color);
-}
-
-.tab-links.active-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 3px;
-  background-color: var(--primary-color);
-}
-
-.tab-contents ul li {
-  list-style-type: none;
-  margin: 15px 0;
   font-size: 1.6rem;
-  line-height: 1.6;
-  text-align: left;
+  line-height: 1.7;
+  margin-bottom: 18px;
 }
 
-.tab-contents ul li span {
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.stat {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stat i {
+  font-size: 1.6rem;
   color: var(--primary-color);
-  font-size: 1.8rem;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 5px;
 }
 
-.tab-contents {
-  display: none;
-  animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.tab-contents.active-tab {
+.stat-label {
+  font-size: 1.2rem;
+  color: var(--light-text);
+  line-height: 1;
   display: block;
 }
 
+.stat-value {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  display: block;
+}
+
+/* Skill Matrix */
+.skills-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.skill-pillar h4 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chip {
+  font-size: 1.4rem;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-color);
+  display: inline-block;
+  border-radius: 20px; /* slight rounding for modern chips */
+  line-height: 1;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color);
+}
+
+.skill-chip.emphasis {
+  border-color: var(--primary-color); /* highlight Next.js */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.1)
+  );
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+/* Resume (Experience & Education) */
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.resume-col {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+}
+
+.resume-item {
+  border-top: 1px solid var(--border-color);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+
+.resume-item:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.resume-item__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.resume-item__head h4 {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.resume-item__meta {
+  font-size: 1.3rem;
+  color: var(--light-text);
+  white-space: nowrap;
+}
+
+.resume-bullets {
+  margin-left: 18px;
+  margin-top: 8px;
+}
+
+.resume-bullets li {
+  font-size: 1.5rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin: 8px 0;
+}
+/* Services */
 #services {
   padding: 8rem 0;
 }
@@ -287,21 +350,17 @@ nav .fa-xmark {
 }
 
 .services-list div {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 30px;
   font-size: 1.6rem;
   font-weight: 300;
-  border-radius: 10px;
-  transition:
-    transform 0.3s,
-    background 0.3s;
+  border-radius: 0;
+  transition: transform 0.3s;
   text-align: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .services-list div:hover {
-  background: rgba(100, 255, 218, 0.1);
   transform: translateY(-10px);
 }
 
@@ -320,6 +379,7 @@ nav .fa-xmark {
 .services-list div p {
   font-size: 1.6rem;
   line-height: 1.6;
+  color: var(--light-text);
 }
 
 /* PORTFOLIO */
@@ -335,18 +395,15 @@ nav .fa-xmark {
 }
 
 .work {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+  background: var(--card-bg);
+  border-radius: 0;
   overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .work:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .work-img {
@@ -372,13 +429,13 @@ nav .fa-xmark {
 }
 
 .work-info h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #64ffda;
+  color: var(--primary-color);
 }
 
 .work-info p {
-  color: #a8b2d1;
+  color: var(--light-text);
   font-size: 1.6rem;
   margin-bottom: 20px;
   line-height: 1.6;
@@ -391,7 +448,7 @@ nav .fa-xmark {
 .stack strong {
   display: block;
   margin-bottom: 10px;
-  color: #e6f1ff;
+  color: var(--text-color);
 }
 
 .tech-logos {
@@ -405,15 +462,16 @@ nav .fa-xmark {
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .tech-logo:hover {
-  background: rgba(100, 255, 218, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
 }
 
@@ -421,6 +479,7 @@ nav .fa-xmark {
   width: 24px;
   height: 24px;
   object-fit: contain;
+  filter: invert(1);
 }
 
 .demo-link {
@@ -428,16 +487,17 @@ nav .fa-xmark {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: rgba(100, 255, 218, 0.1);
-  color: #64ffda;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 0;
   transition: all 0.3s ease;
   font-weight: 500;
+  border: 1px solid var(--border-color);
 }
 
 .demo-link:hover {
-  background: rgba(100, 255, 218, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
 
@@ -447,10 +507,10 @@ nav .fa-xmark {
   margin: 40px auto 0;
   padding: 12px 30px;
   background: transparent;
-  color: #64ffda;
+  color: var(--primary-color);
   text-decoration: none;
-  border: 1px solid #64ffda;
-  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  border-radius: 0;
   transition: all 0.3s ease;
   font-weight: 500;
 }
@@ -501,9 +561,7 @@ nav .fa-xmark {
   color: var(--light-text);
   margin-right: 15px;
   display: inline-block;
-  transition:
-    transform 0.3s,
-    color 0.3s;
+  transition: all 0.3s;
 }
 
 .social-icons a:hover {
@@ -513,21 +571,21 @@ nav .fa-xmark {
 
 .btn.btn2 {
   display: inline-block;
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  background: transparent;
+  color: var(--primary-color);
   font-weight: 600;
   padding: 14px 30px;
-  border-radius: 6px;
-  border: none;
+  border-radius: 0;
+  border: 1px solid var(--primary-color);
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .btn.btn2:hover {
-  background: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--secondary-color);
   transform: translateY(-3px);
 }
 
@@ -540,13 +598,13 @@ form textarea {
   width: 100%;
   border: 0;
   outline: none;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--card-bg);
   padding: 15px;
   margin: 15px 0;
   color: var(--text-color);
   font-size: 1.6rem;
-  border-radius: 6px;
-  border: 1px solid transparent;
+  border-radius: 0;
+  border: 1px solid var(--border-color);
   transition: border 0.3s;
 }
 
@@ -565,10 +623,11 @@ form textarea:focus {
   width: 100%;
   text-align: center;
   padding: 25px 0;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--card-bg);
   font-weight: 300;
   margin-top: 20px;
   font-size: 1.6rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .copyright i {
@@ -591,18 +650,15 @@ form textarea:focus {
     margin-right: auto;
   }
 
-  .about-me {
-    max-width: 100%;
+  .about-grid {
+    grid-template-columns: 1fr;
   }
-
-  .sub-title {
-    font-size: 3.5rem;
+  .resume-grid {
+    grid-template-columns: 1fr;
   }
-
-  .heading {
-    font-size: 4.5rem;
+  .quick-stats {
+    grid-template-columns: 1fr 1fr;
   }
-
   /* Mobile menu */
   nav .fa-bars {
     display: block;
@@ -620,6 +676,7 @@ form textarea:focus {
     padding-top: 50px;
     z-index: 999;
     transition: right 0.5s;
+    border-left: 1px solid var(--border-color);
   }
 
   #header ul li {
@@ -647,15 +704,10 @@ form textarea:focus {
     flex-basis: 100%;
     margin-bottom: 30px;
   }
-
-  .personal-info p {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
 }
 
 @media only screen and (max-width: 600px) {
+  /* HERO SECTION  */
   .container {
     padding: 1rem 5%;
   }
@@ -672,19 +724,25 @@ form textarea:focus {
     font-size: 3.5rem;
   }
 
-  .tab-titles {
-    gap: 20px;
-    flex-wrap: wrap;
+  /* ABOUT ME  */
+
+  .skill-chip {
+    font-size: 1.3rem;
+  }
+  .resume-item__head {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .quick-stats {
+    grid-template-columns: 1fr;
   }
 
-  .tab-links {
-    font-size: 1.6rem;
-  }
-
+  /* FOOTER*/
   .copyright {
     font-size: 1.4rem;
   }
 
+  /* PORTFOLIO */
   .work-list {
     grid-template-columns: 1fr;
   }
