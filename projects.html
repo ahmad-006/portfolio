@@ -12,7 +12,7 @@
   </head>
   <body>
     <h1 class="sub-title">MY WORK</h1>
-    <div class="work-list">
+    <div class="work-list reveal">
       <div class="work">
         <img
           src="https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
@@ -103,5 +103,26 @@
         </div>
       </div>
     </div>
+    <script>
+      window.addEventListener('scroll', reveal);
+
+      function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var revealTop = reveals[i].getBoundingClientRect().top;
+          var revealPoint = 150;
+
+          if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('active');
+          } else {
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      // Trigger once on load
+      reveal();
+    </script>
   </body>
 </html>
