@@ -1,18 +1,18 @@
 :root {
-  --primary-color: #64ffda;
-  --secondary-color: #0a192f;
-  --text-color: #ccd6f6;
-  --light-text: #8892b0;
-  --dark-bg: #0a192f;
-  --card-bg: #112240;
-  --border-color: #233554;
+  --primary-color: #ededed;
+  --secondary-color: #0a0a0a;
+  --text-color: #a3a3a3;
+  --light-text: #737373;
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(23, 23, 23, 0.6);
+  --border-color: rgba(255, 255, 255, 0.08);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -135,24 +135,18 @@ nav .fa-xmark {
 
 .heading {
   margin: 1rem 0;
-  font-size: 6rem;
-  line-height: 1.2;
+  font-size: 6.5rem;
+  line-height: 1.1;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -2px;
 }
 
 .heading span {
-  color: var(--primary-color);
-  position: relative;
-}
-
-.heading span::after {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  z-index: -1;
+  background: linear-gradient(90deg, #fff, #737373);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about-me {
@@ -214,12 +208,17 @@ nav .fa-xmark {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   padding: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
 }
 
 .about-h3 {
   font-size: 2.2rem;
   margin-bottom: 12px;
-  color: var(--text-color);
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
 }
 
 .about-copy {
@@ -327,6 +326,9 @@ nav .fa-xmark {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   padding: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
 }
 
 .resume-item {
@@ -387,11 +389,13 @@ nav .fa-xmark {
   padding: 30px;
   font-size: 1.6rem;
   font-weight: 300;
-  border-radius: 8px; /* Softer corners */
+  border-radius: 12px;
   transition: all 0.4s ease;
   text-align: center;
   border: 1px solid var(--border-color);
   position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .services-list div:hover {
@@ -432,10 +436,12 @@ nav .fa-xmark {
 
 .work {
   background: var(--card-bg);
-  border-radius: 8px; /* Softer corners */
+  border-radius: 12px;
   overflow: hidden;
   transition: all 0.4s ease;
   border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .work:hover {
