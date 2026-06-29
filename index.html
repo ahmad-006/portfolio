@@ -3,576 +3,339 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Welcome to MrSheikho - A passionate web developer showcasing skills, projects, and services. Explore my portfolio and get in touch!"
-    />
-    <meta
-      name="keywords"
-      content="web development, frontend developer, HTML, CSS, JavaScript, React, Next.js, Node.js, MERN Stack, portfolio"
-    />
+    <meta name="description" content="Ahmad Aamir - Full-Stack Developer specializing in MERN stack and Next.js. View my portfolio and projects." />
+    <meta name="keywords" content="Ahmad Aamir, Full-Stack Developer, MERN, Next.js, React, Node.js, Web Developer, Pakistan" />
     <meta name="author" content="Ahmad Aamir" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="MrSheikho - Web Developer Portfolio" />
-    <meta
-      property="og:description"
-      content="Discover the portfolio of Ahmad Aamir, a web developer skilled in the MERN stack. Explore projects and services."
-    />
-    <meta property="og:image" content="/images/logo.png" />
-    <meta property="og:url" content="https://www.mrsheikho.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://www.mrsheikho.com" />
-    <title>Portfolio - Ahmad Aamir</title>
+    <meta property="og:title" content="Ahmad Aamir — Full-Stack Developer" />
+    <meta property="og:description" content="Portfolio of Ahmad Aamir, a Full-Stack Developer specialized in the MERN stack and Next.js." />
+    <meta property="og:type" content="website" />
+    <title>Ahmad Aamir — Full-Stack Developer</title>
+    <!-- Modern, classy fonts: Playfair Display for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="icon" href="./images/logoEG.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="./images/logoEG.png" alt="" class="logo" />
-          <ul id="sidemenu">
-            <li class="links"><a href="#header">HOME</a></li>
-            <li class="links"><a href="#about">ABOUT</a></li>
-            <li class="links"><a href="#services">SERVICES</a></li>
-            <li class="links"><a href="#portfolio">PORTFOLIO</a></li>
-            <li class="links"><a href="#contact">CONTACT</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#home" class="nav-brand">
+        <img src="./images/logoEG.png" alt="Ahmad Aamir Logo" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Selected Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark close-menu" onclick="toggleMenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars open-menu" onclick="toggleMenu()"></i>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+      <div class="hero-content fade-in-up">
+        <span class="hero-subtitle">Based in Lahore, Pakistan</span>
+        <h1 class="hero-title">Crafting digital <br><i>experiences</i> through code.</h1>
+        <p class="hero-desc">
+          I'm Ahmad Aamir, a Full-Stack Developer combining modern aesthetics with robust engineering. Specialized in the MERN stack and Next.js.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">Explore Work</a>
+          <a href="./adittional files/cv.pdf" download class="btn-secondary">Download Résumé</a>
+        </div>
       </div>
+      <div class="hero-visual fade-in">
+        <div class="code-window">
+          <div class="code-header">
+            <div class="dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="file-name">ahmad.config.js</span>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> <span class="operator">=</span> {
+  <span class="property">name</span>: <span class="string">'Ahmad Aamir'</span>,
+  <span class="property">stack</span>: [<span class="string">'Next.js'</span>, <span class="string">'MERN'</span>, <span class="string">'GraphQL'</span>],
+  <span class="property">passion</span>: <span class="string">'Building scalable experiences'</span>,
+  <span class="function">create</span>() {
+    <span class="keyword">return</span> <span class="keyword">this</span>.<span class="property">stack</span>.<span class="method">join</span>(<span class="string">' + '</span>);
+  }
+};
 
-      <!-- HERO SECTION -->
+<span class="variable">developer</span>.<span class="function">create</span>();</code></pre>
+          </div>
+        </div>
+      </div>
+    </header>
 
-      <div class="container">
-        <div class="main-heading">
-          <p class="sub-heading">Welcome, I am</p>
-          <h1 class="heading">Ahmad Aamir</h1>
-          <p class="about-me">
-            Results-driven Full-Stack Developer (MERN & Next.js) and Computer Science student. Experienced in building high-performance, real-time applications using modern frameworks and robust backend architectures.
+    <main>
+      <!-- About & Experience Timeline -->
+      <section class="section" id="about">
+      <div class="about-wrapper">
+        <div class="about-text scroll-reveal">
+          <h2 class="section-title">The Profile</h2>
+          <p class="large-text">
+            Results-driven <strong>Full-Stack Developer</strong> specializing in the MERN stack and Next.js. I focus on engineering scalable, real-time applications with seamless user experiences.
           </p>
-          <a href="./adittional files/cv.pdf" download class="btn cv-btn">
-            <i class="fa-solid fa-download"></i> DOWNLOAD CV
-          </a>
+          <ul class="quick-facts">
+            <li><i class="fa-solid fa-graduation-cap"></i> <strong>Education:</strong> 2nd Semester, ADP in Computer Science (4.0 CGPA) — Riphah International University</li>
+            <li><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Lahore, Pakistan</li>
+            <li><i class="fa-solid fa-code"></i> <strong>Focus:</strong> MERN Stack, Next.js, Real-time APIs</li>
+          </ul>
         </div>
-      </div>
-    </div>
-
-    <!-- ABOUT ME -->
-    <div id="about">
-      <div class="container reveal">
-        <h1 class="sub-title">ABOUT ME</h1>
-
-        <div class="about-grid">
-          <section class="about-card">
-            <h3 class="about-h3">Who I Am</h3>
-            <p class="about-copy">
-              Results-driven Full-Stack Developer (MERN & Next.js) and Computer Science student. Experienced in building high-performance, real-time applications using Node.js, Express, and modern React frameworks. Proficient in implementing complex backend logic, including WebSockets, secure authentication, and relational/non-relational database management. Focused on writing SEO-friendly, maintainable code and optimizing server-side performance.
-            </p>
-
-            <div class="quick-stats">
-              <div class="stat">
-                <i class="fa-solid fa-location-dot"></i>
-                <div>
-                  <span class="stat-label">Location</span>
-                  <span class="stat-value">Lahore, Pakistan</span>
-                </div>
-              </div>
-              <div class="stat">
-                <i class="fa-solid fa-briefcase"></i>
-                <div>
-                  <span class="stat-label">Experience</span>
-                  <span class="stat-value">1+ year (MERN)</span>
-                </div>
-              </div>
-              <div class="stat">
-                <i class="fa-solid fa-layer-group"></i>
-                <div>
-                  <span class="stat-label">Specialization</span>
-                  <span class="stat-value">MERN Stack Development</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="about-cta">
-              <a href="./adittional files/cv.pdf" class="btn btn2" download="">
-                <i class="fa-solid fa-download"></i> Download CV
-              </a>
-            </div>
-          </section>
-
-          <!-- Skill Matrix -->
-          <section class="skills-card">
-            <h3 class="about-h3">Skill Matrix</h3>
-
-            <div class="skills-columns">
-              <div class="skill-pillar">
-                <h4>Frontend</h4>
-                <div class="chip-list">
-                  <span class="skill-chip emphasis">Next.js (App Router)</span>
-                  <span class="skill-chip">React.js</span>
-                  <span class="skill-chip">Redux Toolkit</span>
-                  <span class="skill-chip">React Query</span>
-                  <span class="skill-chip">Tailwind CSS</span>
-                  <span class="skill-chip">HTML5/CSS3</span>
-                </div>
-              </div>
-
-              <div class="skill-pillar">
-                <h4>Backend</h4>
-                <div class="chip-list">
-                  <span class="skill-chip">Node.js</span>
-                  <span class="skill-chip">Express.js</span>
-                  <span class="skill-chip">PostgreSQL & MySQL</span>
-                  <span class="skill-chip">MongoDB</span>
-                  <span class="skill-chip">Supabase</span>
-                  <span class="skill-chip">GraphQL</span>
-                  <span class="skill-chip">Socket.io</span>
-                </div>
-              </div>
-
-              <div class="skill-pillar">
-                <h4>Tools</h4>
-                <div class="chip-list">
-                  <span class="skill-chip">Git &amp; GitHub</span>
-                  <span class="skill-chip">Vercel</span>
-                  <span class="skill-chip">Netlify</span>
-                  <span class="skill-chip">Render</span>
-                  <span class="skill-chip">Postman</span>
-                </div>
-              </div>
-
-              <div class="skill-pillar">
-                <h4>Core</h4>
-                <div class="chip-list">
-                  <span class="skill-chip">WebSockets</span>
-                  <span class="skill-chip">Real-time Data</span>
-                  <span class="skill-chip">OOP</span>
-                  <span class="skill-chip">Data Structures</span>
-                  <span class="skill-chip">Responsive UI/UX</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div class="resume-grid">
-          <section class="resume-col">
-            <h3 class="about-h3">Experience</h3>
-
-            <article class="resume-item">
-              <header class="resume-item__head">
-                <h4>MERN & Next.js Intern — IIFA TECH</h4>
-                <span class="resume-item__meta">March 2026 – June 2026</span>
-              </header>
-              <ul class="resume-bullets">
-                <li>Engineered headless e-commerce solutions using Next.js and Shopify Storefront API via GraphQL.</li>
-                <li>Developed and maintained features for large-scale client codebases, ensuring robust data synchronization.</li>
-                <li>Spearheaded refactoring of legacy modules into clean, industry-standard maintainable code.</li>
-              </ul>
-            </article>
-
-            <article class="resume-item">
-              <header class="resume-item__head">
-                <h4>MERN Stack Apprentice — IIFA TECH</h4>
-                <span class="resume-item__meta">July 2025 – Oct 2025</span>
-              </header>
-              <ul class="resume-bullets">
-                <li>Built modular React components and integrated REST APIs to power dynamic frontend features.</li>
-                <li>Engineered MongoDB schemas and performed complex CRUD operations using Mongoose.</li>
-                <li>Collaborated in Agile sprints, contributing to peer code reviews and version control management.</li>
-              </ul>
-            </article>
-          </section>
-
-          <section class="resume-col">
-            <h3 class="about-h3">Education</h3>
-
-            <article class="resume-item">
-              <header class="resume-item__head">
-                <h4>Bachelor of Science in Computer Science (BSCS) — Riphah International University</h4>
-                <span class="resume-item__meta">Sept 2025 – Sept 2029</span>
-              </header>
-              <ul class="resume-bullets">
-                <li>CGPA: 4.00/4.00. Focus on Object-Oriented Programming (C++), Relational Database Management Systems (SQL), and Core Systems Architecture.</li>
-              </ul>
-            </article>
-
-            <article class="resume-item">
-              <header class="resume-item__head">
-                <h4>Intermediate in Computer Science — Aspire Group of Colleges</h4>
-                <span class="resume-item__meta">July 2023 – Sept 2025</span>
-              </header>
-              <ul class="resume-bullets">
-                <li>Focused on Computer Science, Mathematics, and Physics.</li>
-              </ul>
-            </article>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <!-- SERVICES -->
-
-    <div id="services">
-      <div class="container reveal">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-brands fa-react"></i>
-            <h2>Frontend Development</h2>
-            <p>
-              Building responsive and dynamic user interfaces with React.js, focusing on component-based architecture and state management.
-            </p>
+        
+        <div class="timeline scroll-reveal">
+          <div class="timeline-item">
+            <div class="timeline-date">Mar 2026 — Jun 2026</div>
+            <h3 class="timeline-role">MERN & Next.js Intern</h3>
+            <h4 class="timeline-company">IIFA TECH</h4>
+            <p>Engineered headless e-commerce solutions utilizing Next.js and Shopify GraphQL APIs. Spearheaded legacy code refactoring into maintainable, scalable architectures.</p>
           </div>
-
-          <div>
-            <i class="fa-brands fa-node-js"></i>
-            <h2>Backend Development</h2>
-            <p>
-              Creating robust and scalable server-side applications and RESTful APIs using Node.js and Express.js, ensuring secure and efficient data processing.
-            </p>
-          </div>
-
-          <div>
-            <i class="fa-solid fa-database"></i>
-            <h2>Database &amp; Real-time</h2>
-            <p>
-              Designing efficient MongoDB schemas with Mongoose and implementing real-time communication layers using Socket.io and WebSockets.
-            </p>
+          <div class="timeline-item">
+            <div class="timeline-date">Jul 2025 — Oct 2025</div>
+            <h3 class="timeline-role">MERN Stack Apprentice</h3>
+            <h4 class="timeline-company">IIFA TECH</h4>
+            <p>Architected full-stack features involving complex MongoDB schemas, React frontends, and secure RESTful APIs.</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- PORTFOLIO -->
-    <div id="portfolio">
-      <div class="container reveal">
-        <h1 class="sub-title">MY WORK</h1>
-        <div class="work-list">
-          <div class="work">
-            <div class="work-img">
+    <!-- Expertise / Skills (Bento Box Style) -->
+    <section class="section bg-light" id="expertise">
+      <div class="container">
+        <h2 class="section-title scroll-reveal">Technical Expertise</h2>
+        
+        <div class="bento-grid scroll-reveal">
+          <div class="bento-card span-2">
+            <i class="fa-brands fa-react bento-icon"></i>
+            <h3>Frontend Engineering</h3>
+            <div class="tech-chips">
+              <span>Next.js (App Router)</span>
+              <span>React.js</span>
+              <span>Tailwind CSS</span>
+              <span>Redux Toolkit</span>
+              <span>React Query</span>
+              <span>HTML5 / CSS3</span>
+            </div>
+          </div>
+          <div class="bento-card bg-dark text-white">
+            <i class="fa-brands fa-node-js bento-icon"></i>
+            <h3>Backend Systems</h3>
+            <div class="tech-chips dark-chips">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>REST APIs</span>
+              <span>GraphQL</span>
+            </div>
+          </div>
+          <div class="bento-card bg-dark text-white">
+            <i class="fa-solid fa-database bento-icon"></i>
+            <h3>Database & Real-time</h3>
+            <div class="tech-chips dark-chips">
+              <span>MongoDB</span>
+              <span>PostgreSQL</span>
+              <span>Supabase</span>
+              <span>Socket.io</span>
+            </div>
+          </div>
+          <div class="bento-card span-2">
+            <i class="fa-solid fa-code-branch bento-icon"></i>
+            <h3>Core Competencies</h3>
+            <div class="tech-chips">
+              <span>Object-Oriented Programming (C++)</span>
+              <span>Data Structures</span>
+              <span>Git / GitHub</span>
+              <span>Server-Side Rendering (SSR)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <h2 class="section-title text-center scroll-reveal">Selected Work</h2>
+        
+        <div class="project-showcase">
+          <!-- Project 1 -->
+          <div class="project-row scroll-reveal">
+            <div class="project-image">
               <a href="https://github.com/ahmad-006" target="_blank">
-                <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800" alt="Brioza E-commerce" />
+                <img src="./images/brioza_image.png" alt="Brioza" />
               </a>
             </div>
-            <div class="work-info">
-              <h3>Brioza - Headless E-commerce</h3>
-              <p>
+            <div class="project-info">
+              <span class="project-type">Headless E-commerce</span>
+              <h3 class="project-name">Brioza</h3>
+              <p class="project-desc">
                 Engineered a Next.js headless storefront consuming the Shopify Storefront API via GraphQL for cart management and optimized multi-region SSR. Integrated Supabase for RBAC and Klaviyo for marketing pipelines.
               </p>
-              <div class="stack">
-                <strong>Technologies Used:</strong>
-                <div class="tech-logos">
-                  <div class="tech-logo" title="Next.js">
-                    <span style="font-weight: bold; font-size: 1.2rem;">N</span>
-                  </div>
-                  <div class="tech-logo" title="GraphQL">
-                    <img src="https://cdn.worldvectorlogo.com/logos/graphql-logo-2.svg" alt="GraphQL" />
-                  </div>
-                  <div class="tech-logo" title="Supabase">
-                    <img src="https://cdn.worldvectorlogo.com/logos/supabase.svg" alt="Supabase" />
-                  </div>
-                  <div class="tech-logo" title="Tailwind CSS">
-                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" />
-                  </div>
-                </div>
+              <div class="project-tags">
+                <span>Next.js</span><span>GraphQL</span><span>Supabase</span><span>Tailwind</span>
               </div>
-              <a href="https://github.com/ahmad-006" target="_blank" class="demo-link">
-                <i class="fa-brands fa-github"></i> View Code
-              </a>
+              <a href="https://github.com/ahmad-006" target="_blank" class="project-link">View Source <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
 
-          <div class="work">
-            <div class="work-img">
+          <!-- Project 2 -->
+          <div class="project-row reverse scroll-reveal">
+            <div class="project-image">
               <a href="https://github.com/ahmad-006" target="_blank">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" alt="Nexus Ticket System" />
+                <img src="https://placehold.co/800x530/e2e8f0/1e293b?text=Coming+Soon" alt="Nexus - Coming Soon" />
               </a>
             </div>
-            <div class="work-info">
-              <h3>Nexus - Ticket Management</h3>
-              <p>
-                Engineered a real-time communication layer using Socket.io for live chatting. Implemented a complex thread-based commenting system and secured the ecosystem with JWT-based stateful sessions.
+            <div class="project-info">
+              <span class="project-type">Ticket Management System</span>
+              <h3 class="project-name">Nexus <span style="font-size: 1.6rem; color: var(--text-secondary); font-weight: 400; vertical-align: middle;">(In Progress)</span></h3>
+              <p class="project-desc">
+                Engineered a real-time communication layer using Socket.io for instant messaging and live ticket updates. Implemented a complex hierarchical thread-based commenting system backed by MongoDB.
               </p>
-              <div class="stack">
-                <strong>Technologies Used:</strong>
-                <div class="tech-logos">
-                  <div class="tech-logo" title="MongoDB">
-                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" />
-                  </div>
-                  <div class="tech-logo" title="Express.js">
-                    <img src="https://cdn.worldvectorlogo.com/logos/express-109.svg" alt="Express.js" />
-                  </div>
-                  <div class="tech-logo" title="React">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" />
-                  </div>
-                  <div class="tech-logo" title="Node.js">
-                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" />
-                  </div>
-                  <div class="tech-logo" title="Socket.io">
-                    <img src="https://cdn.worldvectorlogo.com/logos/socket-io.svg" alt="Socket.io" />
-                  </div>
-                </div>
+              <div class="project-tags">
+                <span>React</span><span>Node.js</span><span>Socket.io</span><span>MongoDB</span>
               </div>
-              <a href="https://github.com/ahmad-006" target="_blank" class="demo-link">
-                <i class="fa-brands fa-github"></i> View Code
-              </a>
+              <a href="https://github.com/ahmad-006" target="_blank" class="project-link">View Source <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
-
-          <div class="work">
-            <div class="work-img">
+          
+          <!-- Project 3 -->
+          <div class="project-row scroll-reveal">
+            <div class="project-image">
               <a href="https://financybuddy.vercel.app" target="_blank">
-                <img src="./images/financybuddy.png" alt="Finance App" />
+                <img src="./images/financybuddy.png" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'" alt="Financy Buddy" />
               </a>
             </div>
-            <div class="work-info">
-              <h3>Financy Buddy</h3>
-              <p>
-                Developed a full-stack finance dashboard for tracking income and savings. Optimized state synchronization and server-state caching using React Query for a high-speed UI.
+            <div class="project-info">
+              <span class="project-type">Finance Dashboard</span>
+              <h3 class="project-name">Financy Buddy</h3>
+              <p class="project-desc">
+                Developed a comprehensive MERN dashboard for secure financial tracking. Utilized React Query for advanced server-state synchronization and optimistic UI updates for a zero-lag experience.
               </p>
-              <div class="stack">
-                <strong>Technologies Used:</strong>
-                <div class="tech-logos">
-                  <div class="tech-logo" title="React Query">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-query-1.svg" alt="React Query" />
-                  </div>
-                  <div class="tech-logo" title="Express.js">
-                    <img src="https://cdn.worldvectorlogo.com/logos/express-109.svg" alt="Express.js" />
-                  </div>
-                  <div class="tech-logo" title="React">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" />
-                  </div>
-                  <div class="tech-logo" title="Node.js">
-                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" />
-                  </div>
-                  <div class="tech-logo" title="Tailwind CSS">
-                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" />
-                  </div>
-                </div>
+              <div class="project-tags">
+                <span>MERN Stack</span><span>React Query</span><span>Express.js</span>
               </div>
-              <a href="https://financybuddy.vercel.app" target="_blank" class="demo-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-              </a>
-            </div>
-          </div>
-
-          <div class="work">
-            <div class="work-img">
-              <a href="https://react-fast-pizza-by-ms.netlify.app/" target="_blank">
-                <img src="./images/fastPizza.png" alt="Pizza App" />
-              </a>
-            </div>
-            <div class="work-info">
-              <h3>React Fast Pizza</h3>
-              <p>
-                Managed global cart state and complex order logic using Redux Toolkit and dynamic routing. Features a responsive ordering interface with real-time status updates.
-              </p>
-              <div class="stack">
-                <strong>Technologies Used:</strong>
-                <div class="tech-logos">
-                  <div class="tech-logo" title="React">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" />
-                  </div>
-                  <div class="tech-logo" title="Redux">
-                    <img src="https://cdn.worldvectorlogo.com/logos/redux.svg" alt="Redux" />
-                  </div>
-                  <div class="tech-logo" title="React Router">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-router.svg" alt="React Router" />
-                  </div>
-                  <div class="tech-logo" title="Tailwind CSS">
-                    <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" />
-                  </div>
-                </div>
-              </div>
-              <a href="https://react-fast-pizza-by-ms.netlify.app/" target="_blank" class="demo-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-              </a>
-            </div>
-          </div>
-
-          <div class="work">
-            <div class="work-img">
-              <a href="https://react-quiz-by-ms.netlify.app/" target="_blank">
-                <img src="./images/quiz.png" alt="Quiz App" />
-              </a>
-            </div>
-            <div class="work-info">
-              <h3>React Quiz App</h3>
-              <p>
-                Built a real-time scoring engine and timer logic using the useReducer pattern and Context API for an interactive, performant quiz platform.
-              </p>
-              <div class="stack">
-                <strong>Technologies Used:</strong>
-                <div class="tech-logos">
-                  <div class="tech-logo" title="React">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" />
-                  </div>
-                  <div class="tech-logo" title="JavaScript">
-                    <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript" />
-                  </div>
-                  <div class="tech-logo" title="CSS3">
-                    <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3" />
-                  </div>
-                </div>
-              </div>
-              <a href="https://react-quiz-by-ms.netlify.app/" target="_blank" class="demo-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-              </a>
+              <a href="https://financybuddy.vercel.app" target="_blank" class="project-link">Live App <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
-        <a href="./projects.html" class="btn">See More</a>
+        
+        <div class="text-center" style="margin-top: 4rem;">
+            <a href="./projects.html" class="btn-secondary">View All Projects</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- CONTACT -->
-    <div id="contact">
-      <div class="container reveal">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">CONTACT ME</h1>
-            <p>
-              <i class="fa-solid fa-paper-plane"></i> ahmadaamir1806@gmail.com
-            </p>
-            <p><i class="fa-solid fa-phone"></i> 0313-4424048</p>
-            <p><i class="fa-solid fa-location-dot"></i> Lahore, Pakistan</p>
-            <div class="social-icons">
-              <a href="https://x.com/MrSheikho0o" target="_blank"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/mrsheikho_06/?utm_source=ig_web_button_share_sheet"
-                target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/ahmad-aamir-5b210a371/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="https://github.com/ahmad-006" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-            <a href="./adittional files/cv.pdf" download class="btn btn2">
-              <i class="fa-solid fa-download"></i> Download CV
-            </a>
+    <!-- Contact -->
+    <section class="section bg-light" id="contact">
+      <div class="container contact-container scroll-reveal">
+        <div class="contact-details">
+          <h2 class="section-title">Let's create <br><i>something</i> together.</h2>
+          <p class="contact-text">Currently open to new opportunities, collaborations, and interesting projects. Reach out and let's start a conversation.</p>
+          
+          <div class="contact-links">
+            <a href="mailto:ahmadaamir1806@gmail.com"><i class="fa-solid fa-envelope"></i> ahmadaamir1806@gmail.com</a>
           </div>
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your name" required />
-              <input type="email" name="Email" placeholder="Your Email" />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
+          
+          <div class="social-links">
+            <a href="https://github.com/ahmad-006" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ahmad-aamir-5b210a371/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:ahmadaamir1806@gmail.com"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
-        <span id="msg"></span>
+        
+        <div class="contact-form-wrapper">
+          <form name="submit-to-google-sheet" class="modern-form">
+            <div class="input-group">
+              <input type="text" name="Name" id="name" required placeholder=" " />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="input-group">
+              <input type="email" name="Email" id="email" required placeholder=" " />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="input-group">
+              <textarea name="Message" id="message" rows="4" required placeholder=" "></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn-primary w-100">Send Message</button>
+            <span id="msg"></span>
+          </form>
+        </div>
       </div>
-      <div class="copyright">
-        <p>
-          CopyRight © MrSheikho.....Made with
-          <i class="fa-solid fa-heart"></i> by Ahmad Aamir
-        </p>
+    </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Ahmad Aamir. Crafted with intent and precision.</p>
       </div>
-    </div>
+    </footer>
+
+    <!-- Scripts -->
     <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
-
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-
-      function openmenu() {
-        sidemenu.style.right = "0";
+      // Mobile Menu Toggle
+      const navLinks = document.getElementById("navLinks");
+      function toggleMenu() {
+        navLinks.classList.toggle("active");
       }
 
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-      }
-    </script>
+      // Close menu when a link is clicked
+      document.querySelectorAll('.nav-links li a').forEach(link => {
+          link.addEventListener('click', () => {
+              navLinks.classList.remove('active');
+          });
+      });
 
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbynkV7Ezet8B-8MLwortMJXa6dr1KSxzEJNG9SHPv-Ocv60Ixh9JAO9Y8q0v0-ZmKBhgw/exec";
+      // Google Sheets Form Submission
+      const scriptURL = "https://script.google.com/macros/s/AKfycbynkV7Ezet8B-8MLwortMJXa6dr1KSxzEJNG9SHPv-Ocv60Ixh9JAO9Y8q0v0-ZmKBhgw/exec";
       const form = document.forms["submit-to-google-sheet"];
       const msg = document.getElementById("msg");
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        msg.innerHTML = "Sending...";
+        msg.style.color = "#4f46e5";
+        msg.innerHTML = "Sending your message...";
 
         try {
-          const response = await fetch(scriptURL, {
-            method: "POST",
-            body: new FormData(form),
-          });
+          const response = await fetch(scriptURL, { method: "POST", body: new FormData(form) });
           if (response.ok) {
-            msg.innerHTML = "Message Sent Successfully";
+            msg.style.color = "#10b981";
+            msg.innerHTML = "Message Sent Successfully!";
             form.reset();
           } else {
+            msg.style.color = "#ef4444";
             msg.innerHTML = "Error! Message not sent.";
           }
         } catch (error) {
+          msg.style.color = "#ef4444";
           msg.innerHTML = "Error! Message not sent.";
-          console.error("Error!", error.message);
         }
-
-        setTimeout(() => {
-          msg.innerHTML = "";
-        }, 5000);
+        setTimeout(() => { msg.innerHTML = ""; }, 5000);
       });
-    </script>
 
-    <script>
-      window.addEventListener("scroll", reveal);
+      // Scroll Reveal Animation (Intersection Observer)
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
 
-      function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var revealTop = reveals[i].getBoundingClientRect().top;
-          var revealPoint = 150;
-
-          if (revealTop < windowHeight - revealPoint) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
           }
-        }
-      }
-      // Trigger once on load
-      reveal();
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>
