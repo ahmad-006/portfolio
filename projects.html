@@ -1,132 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
-    <script
-      src="https://kit.fontawesome.com/dd516bc2de.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./projects.css" />
-  </head>
-  <body>
-    <h1 class="sub-title">MY WORK</h1>
-    <div class="work-list reveal">
-      <div class="work">
-        <img
-          src="https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-          alt="Quiz App"
-        />
-        <div class="layer">
-          <h3>Quiz</h3>
-          <p>
-            An interactive quiz game with multiple-choice questions. Tracks
-            scores and gives instant feedback for an engaging learning
-            experience.
-          </p>
-          <a href="./including projects/Quiz/index.html" target="_blank"
-            ><i class="fa-solid fa-arrow-up-right-from-square"></i
-          ></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project Archive - Ahmad Aamir. A comprehensive collection of web applications and tools." />
+  <meta name="author" content="Ahmad Aamir" />
+  <title>Project Archive — Ahmad Aamir</title>
+  
+  <!-- Modern, classy fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="./images/logoEG.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="./index.html" class="nav-brand">
+      <img src="./images/logoEG.png" alt="Ahmad Aamir Logo" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./index.html#about">About</a></li>
+      <li><a href="./index.html#expertise">Expertise</a></li>
+      <li><a href="./index.html#work">Selected Work</a></li>
+      <li><a href="./index.html#contact">Contact</a></li>
+      <i class="fa-solid fa-xmark close-menu" onclick="toggleMenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars open-menu" onclick="toggleMenu()"></i>
+  </nav>
+
+  <header class="page-header">
+    <div class="fade-in-up">
+      <h1 class="page-title">Project Archive</h1>
+      <p class="page-subtitle">A comprehensive collection of applications and tools I have built.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 6rem;">
+      <div class="container">
+      
+      <!-- Major Projects (Editorial Style) -->
+      <div class="project-showcase">
+        
+        <!-- React Fast Pizza -->
+        <div class="project-row scroll-reveal">
+          <div class="project-image">
+            <a href="https://react-fast-pizza-by-ms.netlify.app/" target="_blank">
+              <img src="./images/fastPizza.png" onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800'" alt="React Fast Pizza" />
+            </a>
+          </div>
+          <div class="project-info">
+            <span class="project-type">Frontend Application</span>
+            <h3 class="project-name">React Fast Pizza</h3>
+            <p class="project-desc">
+              Managed global cart state and complex order logic using Redux Toolkit and dynamic routing. Features a responsive ordering interface with real-time status updates.
+            </p>
+            <div class="project-tags">
+              <span>React</span><span>Redux Toolkit</span><span>React Router</span><span>Tailwind CSS</span>
+            </div>
+            <a href="https://react-fast-pizza-by-ms.netlify.app/" target="_blank" class="project-link">Live App <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- React Quiz App -->
+        <div class="project-row reverse scroll-reveal">
+          <div class="project-image">
+            <a href="https://react-quiz-by-ms.netlify.app/" target="_blank">
+              <img src="./images/quiz.png" onerror="this.src='https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?auto=format&fit=crop&q=80&w=800'" alt="React Quiz App" />
+            </a>
+          </div>
+          <div class="project-info">
+            <span class="project-type">Interactive Platform</span>
+            <h3 class="project-name">React Quiz App</h3>
+            <p class="project-desc">
+              Built a real-time scoring engine and timer logic using the useReducer pattern and Context API for an interactive, highly performant quiz platform.
+            </p>
+            <div class="project-tags">
+              <span>React</span><span>Context API</span><span>CSS3</span>
+            </div>
+            <a href="https://react-quiz-by-ms.netlify.app/" target="_blank" class="project-link">Live App <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
-
-      <div class="work">
-        <img
-          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-          alt="Calculator"
-        />
-        <div class="layer">
-          <h3>Calculator</h3>
-          <p>
-            Minimalist Calculator — A clean and responsive calculator built with
-            HTML, CSS, and JavaScript. Handles basic arithmetic operations with
-            an intuitive interface.
-          </p>
-          <a href="https://calculator-by-ms.netlify.app/" target="_blank"
-            ><i class="fa-solid fa-arrow-up-right-from-square"></i
-          ></a>
+      
+      <!-- Minor Projects Grid -->
+      <h2 class="minor-projects-header scroll-reveal">More Projects</h2>
+      
+      <div class="minor-projects-grid scroll-reveal">
+        
+        <!-- Calculator -->
+        <div class="minor-project-card">
+          <img class="minor-project-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Calculator" />
+          <div class="minor-project-info">
+            <h3>Minimalist Calculator</h3>
+            <p>A clean and responsive calculator built with HTML, CSS, and JavaScript. Handles basic arithmetic operations with an intuitive interface.</p>
+            <a href="https://calculator-by-ms.netlify.app/" target="_blank" class="project-link">Live App <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
-      </div>
-
-      <div class="work">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rock-paper-scissors.svg/1200px-Rock-paper-scissors.svg.png"
-          alt="Rock Paper Scissors Game"
-        />
-        <div class="layer">
-          <h3>Rock Paper Scissors Game</h3>
-          <p>
-            Play against the computer with a live score tracker. Implements game
-            logic, interactive buttons, and dynamic updates to make gameplay
-            smooth and fun.
-          </p>
-          <a href="https://rps-game-ms.netlify.app/" target="_blank"
-            ><i class="fa-solid fa-arrow-up-right-from-square"></i
-          ></a>
+        
+        <!-- Weather App -->
+        <div class="minor-project-card">
+          <img class="minor-project-img" src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Weather App" />
+          <div class="minor-project-info">
+            <h3>Weather App</h3>
+            <p>Fetches real-time weather information based on city input. Shows temperature, conditions, and forecast with an interactive UI.</p>
+            <a href="./including projects/weather app/index.html" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
-      </div>
 
-      <div class="work">
-        <img
-          src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-          alt="Weather App"
-        />
-        <div class="layer">
-          <h3>Weather App</h3>
-          <p>
-            Fetches real-time weather information based on city input. Shows
-            temperature, conditions, and forecast with an interactive and
-            responsive UI.
-          </p>
-          <a href="./including projects/weather app/index.html" target="_blank"
-            ><i class="fa-solid fa-arrow-up-right-from-square"></i
-          ></a>
+        <!-- Todo List -->
+        <div class="minor-project-card">
+          <img class="minor-project-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Todo List" />
+          <div class="minor-project-info">
+            <h3>Task Manager</h3>
+            <p>A task management app to add, delete, and mark tasks as complete. Focused on simplicity, persistence, and ease of use.</p>
+            <a href="./including projects/todo/index.html" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
-      </div>
+        
+        <!-- Rock Paper Scissors -->
+        <div class="minor-project-card">
+          <img class="minor-project-img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Rock Paper Scissors" />
+          <div class="minor-project-info">
+            <h3>Rock Paper Scissors</h3>
+            <p>Play against the computer with a live score tracker. Implements game logic and dynamic UI updates for smooth gameplay.</p>
+            <a href="https://rps-game-ms.netlify.app/" target="_blank" class="project-link">Live App <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Basic Quiz -->
+        <div class="minor-project-card">
+          <img class="minor-project-img" src="https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vanilla JS Quiz" />
+          <div class="minor-project-info">
+            <h3>Vanilla JS Quiz</h3>
+            <p>An interactive quiz game with multiple-choice questions. Tracks scores and gives instant feedback for an engaging learning experience.</p>
+            <a href="./including projects/Quiz/index.html" target="_blank" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-      <div class="work">
-        <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-          alt="Todo List"
-        />
-        <div class="layer">
-          <h3>Todo List</h3>
-          <p>
-            A task management app to add, delete, and mark tasks as complete.
-            Focused on simplicity, persistence, and ease of use for daily
-            planning.
-          </p>
-          <a href="./including projects/todo/index.html" target="_blank"
-            ><i class="fa-solid fa-arrow-up-right-from-square"></i
-          ></a>
-        </div>
       </div>
     </div>
-    <script>
-      window.addEventListener('scroll', reveal);
+  </section>
+  </main>
 
-      function reveal() {
-        var reveals = document.querySelectorAll('.reveal');
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ahmad Aamir. Crafted with intent and precision.</p>
+    </div>
+  </footer>
 
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var revealTop = reveals[i].getBoundingClientRect().top;
-          var revealPoint = 150;
+  <script>
+    // Mobile Menu Toggle
+    const navLinks = document.getElementById("navLinks");
+    function toggleMenu() {
+      navLinks.classList.toggle("active");
+    }
 
-          if (revealTop < windowHeight - revealPoint) {
-            reveals[i].classList.add('active');
-          } else {
-            reveals[i].classList.remove('active');
-          }
+    // Scroll Reveal Animation (Intersection Observer)
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
         }
-      }
-      // Trigger once on load
-      reveal();
-    </script>
-  </body>
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
 </html>
