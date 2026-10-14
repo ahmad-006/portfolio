@@ -3,339 +3,583 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ahmad Aamir - Full-Stack Developer specializing in MERN stack and Next.js. View my portfolio and projects." />
-    <meta name="keywords" content="Ahmad Aamir, Full-Stack Developer, MERN, Next.js, React, Node.js, Web Developer, Pakistan" />
+    <meta name="description" content="Ahmad Aamir — Full-Stack Developer specializing in MERN stack and Next.js." />
     <meta name="author" content="Ahmad Aamir" />
-    <meta property="og:title" content="Ahmad Aamir — Full-Stack Developer" />
-    <meta property="og:description" content="Portfolio of Ahmad Aamir, a Full-Stack Developer specialized in the MERN stack and Next.js." />
-    <meta property="og:type" content="website" />
+    
     <title>Ahmad Aamir — Full-Stack Developer</title>
-    <!-- Modern, classy fonts: Playfair Display for headings, Inter for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    
+    <!-- Academic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="icon" href="./images/logoEG.png" type="image/x-icon" />
+    
+    <link rel="icon" href="./images/logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <a href="#home" class="nav-brand">
-        <img src="./images/logoEG.png" alt="Ahmad Aamir Logo" />
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#work">Selected Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <i class="fa-solid fa-xmark close-menu" onclick="toggleMenu()"></i>
-      </ul>
-      <i class="fa-solid fa-bars open-menu" onclick="toggleMenu()"></i>
-    </nav>
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="container masthead-inner">
+        <a href="#home" class="brand-monogram">
+          Ahmad Aamir <span>/ Full-Stack Developer</span>
+        </a>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-      <div class="hero-content fade-in-up">
-        <span class="hero-subtitle">Based in Lahore, Pakistan</span>
-        <h1 class="hero-title">Crafting digital <br><i>experiences</i> through code.</h1>
-        <p class="hero-desc">
-          I'm Ahmad Aamir, a Full-Stack Developer combining modern aesthetics with robust engineering. Specialized in the MERN stack and Next.js.
-        </p>
-        <div class="hero-actions">
-          <a href="#work" class="btn-primary">Explore Work</a>
-          <a href="./adittional files/cv.pdf" download class="btn-secondary">Download Résumé</a>
-        </div>
-      </div>
-      <div class="hero-visual fade-in">
-        <div class="code-window">
-          <div class="code-header">
-            <div class="dots">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-            <span class="file-name">ahmad.config.js</span>
-          </div>
-          <div class="code-content">
-            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> <span class="operator">=</span> {
-  <span class="property">name</span>: <span class="string">'Ahmad Aamir'</span>,
-  <span class="property">stack</span>: [<span class="string">'Next.js'</span>, <span class="string">'MERN'</span>, <span class="string">'GraphQL'</span>],
-  <span class="property">passion</span>: <span class="string">'Building scalable experiences'</span>,
-  <span class="function">create</span>() {
-    <span class="keyword">return</span> <span class="keyword">this</span>.<span class="property">stack</span>.<span class="method">join</span>(<span class="string">' + '</span>);
-  }
-};
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="./projects.html">Archive &rarr;</a></li>
+            <li><a href="#contact" class="cv-link">Contact</a></li>
+          </ul>
+        </nav>
 
-<span class="variable">developer</span>.<span class="function">create</span>();</code></pre>
-          </div>
-        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
       </div>
     </header>
 
     <main>
-      <!-- About & Experience Timeline -->
-      <section class="section" id="about">
-      <div class="about-wrapper">
-        <div class="about-text scroll-reveal">
-          <h2 class="section-title">The Profile</h2>
-          <p class="large-text">
-            Results-driven <strong>Full-Stack Developer</strong> specializing in the MERN stack and Next.js. I focus on engineering scalable, real-time applications with seamless user experiences.
-          </p>
-          <ul class="quick-facts">
-            <li><i class="fa-solid fa-graduation-cap"></i> <strong>Education:</strong> 2nd Semester, ADP in Computer Science (4.0 CGPA) — Riphah International University</li>
-            <li><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Lahore, Pakistan</li>
-            <li><i class="fa-solid fa-code"></i> <strong>Focus:</strong> MERN Stack, Next.js, Real-time APIs</li>
-          </ul>
-        </div>
-        
-        <div class="timeline scroll-reveal">
-          <div class="timeline-item">
-            <div class="timeline-date">Mar 2026 — Jun 2026</div>
-            <h3 class="timeline-role">MERN & Next.js Intern</h3>
-            <h4 class="timeline-company">IIFA TECH</h4>
-            <p>Engineered headless e-commerce solutions utilizing Next.js and Shopify GraphQL APIs. Spearheaded legacy code refactoring into maintainable, scalable architectures.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Jul 2025 — Oct 2025</div>
-            <h3 class="timeline-role">MERN Stack Apprentice</h3>
-            <h4 class="timeline-company">IIFA TECH</h4>
-            <p>Architected full-stack features involving complex MongoDB schemas, React frontends, and secure RESTful APIs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Expertise / Skills (Bento Box Style) -->
-    <section class="section bg-light" id="expertise">
-      <div class="container">
-        <h2 class="section-title scroll-reveal">Technical Expertise</h2>
-        
-        <div class="bento-grid scroll-reveal">
-          <div class="bento-card span-2">
-            <i class="fa-brands fa-react bento-icon"></i>
-            <h3>Frontend Engineering</h3>
-            <div class="tech-chips">
-              <span>Next.js (App Router)</span>
-              <span>React.js</span>
-              <span>Tailwind CSS</span>
-              <span>Redux Toolkit</span>
-              <span>React Query</span>
-              <span>HTML5 / CSS3</span>
-            </div>
-          </div>
-          <div class="bento-card bg-dark text-white">
-            <i class="fa-brands fa-node-js bento-icon"></i>
-            <h3>Backend Systems</h3>
-            <div class="tech-chips dark-chips">
-              <span>Node.js</span>
-              <span>Express.js</span>
-              <span>REST APIs</span>
-              <span>GraphQL</span>
-            </div>
-          </div>
-          <div class="bento-card bg-dark text-white">
-            <i class="fa-solid fa-database bento-icon"></i>
-            <h3>Database & Real-time</h3>
-            <div class="tech-chips dark-chips">
-              <span>MongoDB</span>
-              <span>PostgreSQL</span>
-              <span>Supabase</span>
-              <span>Socket.io</span>
-            </div>
-          </div>
-          <div class="bento-card span-2">
-            <i class="fa-solid fa-code-branch bento-icon"></i>
-            <h3>Core Competencies</h3>
-            <div class="tech-chips">
-              <span>Object-Oriented Programming (C++)</span>
-              <span>Data Structures</span>
-              <span>Git / GitHub</span>
-              <span>Server-Side Rendering (SSR)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected Work -->
-    <section class="section" id="work">
-      <div class="container">
-        <h2 class="section-title text-center scroll-reveal">Selected Work</h2>
-        
-        <div class="project-showcase">
-          <!-- Project 1 -->
-          <div class="project-row scroll-reveal">
-            <div class="project-image">
-              <a href="https://github.com/ahmad-006" target="_blank">
-                <img src="./images/brioza_image.png" alt="Brioza" />
-              </a>
-            </div>
-            <div class="project-info">
-              <span class="project-type">Headless E-commerce</span>
-              <h3 class="project-name">Brioza</h3>
-              <p class="project-desc">
-                Engineered a Next.js headless storefront consuming the Shopify Storefront API via GraphQL for cart management and optimized multi-region SSR. Integrated Supabase for RBAC and Klaviyo for marketing pipelines.
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <span class="hero-kicker">Lahore, Pakistan • Full-Stack Developer</span>
+              <h1 class="hero-title">Crafting digital <br /><i>experiences</i> through code.</h1>
+              <p class="hero-bio">
+                I'm Ahmad Aamir, a Full-Stack Developer combining modern aesthetics with robust engineering. Specialized in the MERN stack and Next.js.
               </p>
-              <div class="project-tags">
-                <span>Next.js</span><span>GraphQL</span><span>Supabase</span><span>Tailwind</span>
+              <div class="hero-actions">
+                <a href="#projects" class="btn-classic-primary">
+                  <span>View Projects</span>
+                  <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                <a href="./adittional files/cv.pdf" download class="btn-classic-outline">
+                  <span>Download Résumé</span>
+                </a>
               </div>
-              <a href="https://github.com/ahmad-006" target="_blank" class="project-link">View Source <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hero-visual">
+              <div class="macos-window">
+                <div class="macos-topbar">
+                  <div class="macos-dots">
+                    <span class="macos-dot red"></span>
+                    <span class="macos-dot yellow"></span>
+                    <span class="macos-dot green"></span>
+                  </div>
+                  <span class="macos-title">ahmad.config.js</span>
+                </div>
+                <div class="macos-body">
+                  <pre><code><span class="syntax-keyword">const</span> <span class="syntax-var">developer</span> <span class="syntax-op">=</span> {
+  <span class="syntax-prop">name</span>: <span class="syntax-str">'Ahmad Aamir'</span>,
+  <span class="syntax-prop">education</span>: <span class="syntax-str">'ADP in Computer Science (3.89 CGPA)'</span>,
+  <span class="syntax-prop">stack</span>: [<span class="syntax-str">'TypeScript'</span>, <span class="syntax-str">'Next.js'</span>, <span class="syntax-str">'React'</span>, <span class="syntax-str">'Node.js'</span>],
+  <span class="syntax-fn">build</span>() {
+    <span class="syntax-keyword">return</span> <span class="syntax-str">'Building clean, responsive web apps'</span>;
+  }
+};
+
+<span class="syntax-var">developer</span>.<span class="syntax-fn">build</span>();</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 01: About (Education & Work Experience) -->
+      <section class="section-block" id="about">
+        <div class="container">
+          <div class="section-mast">
+            <span class="section-number">01 / BACKGROUND</span>
+            <h2 class="section-headline">Education & <i>Experience</i></h2>
+          </div>
+
+          <div class="cv-split-grid">
+            <div>
+              <h3 class="cv-column-title">Education</h3>
+              <div class="academic-record-card">
+                <h4 class="academic-degree">Associate Degree in Computer Science (ADP)</h4>
+                <div class="academic-institution">Riphah International University • 3rd Semester</div>
+                <p class="academic-details">
+                  Studying computer science fundamentals including Object-Oriented Programming (C++), Data Structures and Algorithms, Relational Databases, and web development.
+                </p>
+                <div class="academic-standing">Academic Result: 3.89 / 4.0 CGPA</div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="cv-column-title">Work Experience</h3>
+              <div class="experience-record-list">
+                <div class="experience-record-item">
+                  <div class="record-period">Mar 2026 — Jun 2026</div>
+                  <h4 class="record-title">MERN & Next.js Intern</h4>
+                  <div class="record-company">IIFA TECH</div>
+                  <p class="record-summary">
+                    Worked on headless e-commerce websites with Next.js and Shopify GraphQL APIs. Improved page load times and helped turn legacy code into clean, reusable React components.
+                  </p>
+                </div>
+
+                <div class="experience-record-item">
+                  <div class="record-period">Jul 2025 — Oct 2025</div>
+                  <h4 class="record-title">MERN Stack Apprentice</h4>
+                  <div class="record-company">IIFA TECH</div>
+                  <p class="record-summary">
+                    Built full-stack features using MongoDB, Express, React, and Node.js. Created REST APIs and implemented user authentication with JWT.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 02: Skills -->
+      <section class="section-block" id="skills">
+        <div class="container">
+          <div class="section-mast">
+            <span class="section-number">02 / SKILLS</span>
+            <h2 class="section-headline">Skills & <i>Technologies</i></h2>
+          </div>
+
+          <div class="matrix-table">
+            <div class="matrix-row">
+              <h3 class="matrix-label">Frontend</h3>
+              <div class="matrix-body">
+                <p class="matrix-description">
+                  Building responsive, accessible user interfaces with modern React frameworks and clean styling.
+                </p>
+                <div class="matrix-chips">
+                  <span class="matrix-chip">TypeScript</span>
+                  <span class="matrix-chip">Next.js (App Router)</span>
+                  <span class="matrix-chip">React.js</span>
+                  <span class="matrix-chip">Tailwind CSS</span>
+                  <span class="matrix-chip">TanStack Query</span>
+                  <span class="matrix-chip">Redux Toolkit</span>
+                  <span class="matrix-chip">HTML5 / CSS3</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="matrix-row">
+              <h3 class="matrix-label">Backend</h3>
+              <div class="matrix-body">
+                <p class="matrix-description">
+                  Writing REST APIs, server routes, Server Actions, and real-time WebSocket communication.
+                </p>
+                <div class="matrix-chips">
+                  <span class="matrix-chip">Node.js</span>
+                  <span class="matrix-chip">Express.js</span>
+                  <span class="matrix-chip">Socket.io (Real-Time)</span>
+                  <span class="matrix-chip">Next.js Server Actions</span>
+                  <span class="matrix-chip">REST APIs</span>
+                  <span class="matrix-chip">GraphQL Basics</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="matrix-row">
+              <h3 class="matrix-label">Databases</h3>
+              <div class="matrix-body">
+                <p class="matrix-description">
+                  Designing database schemas, managing queries, and handling data persistence.
+                </p>
+                <div class="matrix-chips">
+                  <span class="matrix-chip">PostgreSQL</span>
+                  <span class="matrix-chip">Prisma ORM</span>
+                  <span class="matrix-chip">MongoDB & Mongoose</span>
+                  <span class="matrix-chip">Supabase</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="matrix-row">
+              <h3 class="matrix-label">Tools & CS</h3>
+              <div class="matrix-body">
+                <p class="matrix-description">
+                  Version control, programming concepts, and cloud hosting platforms.
+                </p>
+                <div class="matrix-chips">
+                  <span class="matrix-chip">Git / GitHub</span>
+                  <span class="matrix-chip">Data Structures</span>
+                  <span class="matrix-chip">OOP (C++)</span>
+                  <span class="matrix-chip">Vercel & Netlify</span>
+                  <span class="matrix-chip">Linux Basics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 03: Projects with Stepped Schematic Connector -->
+      <section class="section-block" id="projects">
+        <div class="container">
+          <div class="section-mast">
+            <span class="section-number">03 / PROJECTS</span>
+            <h2 class="section-headline">Featured <i>Projects</i></h2>
+          </div>
+
+          <div class="schematic-showcase">
+            <!-- Project 01: Ashley's (Card on Left) -->
+            <div class="project-step-node node-left">
+              <article class="project-terminal-card">
+                <div class="project-media-wrap">
+                  <a href="https://ashleys-eosin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                      <source srcset="./images/ashleys.webp" type="image/webp" />
+                      <img src="./images/ashleys.png" alt="Ashley's Online Clothing Store" loading="eager" />
+                    </picture>
+                  </a>
+                </div>
+                <div class="project-meta-wrap">
+                  <span class="project-step-counter">Project 01 / E-Commerce</span>
+                  <h3 class="project-heading">Ashley's</h3>
+                  <p class="project-synopsis">
+                    A full-stack clothing store built with Next.js 16 and React 19. Admins can customize the homepage directly through an interactive layout builder. Features instant product search with a ⌘K modal, real-time cart updates, and a database backed by PostgreSQL and Prisma ORM.
+                  </p>
+                  <ul class="project-specs">
+                    <li>Dynamic homepage builder allowing admins to manage featured carousels</li>
+                    <li>Global ⌘K search modal for quick keyboard-friendly product discovery</li>
+                    <li>Server Actions for cart operations and inventory updates</li>
+                    <li>Optimized database connection pooling with Prisma on PostgreSQL</li>
+                  </ul>
+                  <div class="project-tags-list">
+                    <span>Next.js 16</span>
+                    <span>React 19</span>
+                    <span>Tailwind CSS</span>
+                    <span>PostgreSQL</span>
+                    <span>Prisma</span>
+                    <span>NextAuth</span>
+                  </div>
+                  <div class="project-links-strip">
+                    <a href="https://ashleys-eosin.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                      <span>Live Website</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://github.com/ahmad-006/ashleys" target="_blank" rel="noopener noreferrer" class="project-action-link secondary">
+                      <span>Source Code</span>
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Stepped Connector: Left (Project 1) to Right (Project 2) -->
+            <div class="schematic-rail">
+              <svg viewBox="0 0 1000 80" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M 250,0 L 250,40 L 750,40 L 750,80" class="rail-path" />
+                <circle cx="250" cy="0" r="3.5" class="rail-node" />
+                <circle cx="750" cy="80" r="3.5" class="rail-node" />
+              </svg>
+            </div>
+
+            <!-- Project 02: NEXUS (Card on Right) -->
+            <div class="project-step-node node-right">
+              <article class="project-terminal-card">
+                <div class="project-media-wrap">
+                  <a href="https://github.com/ahmad-006/NEXUS" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                      <source srcset="./images/nexus.webp" type="image/webp" />
+                      <img src="./images/nexus.png" alt="Nexus Team Task Manager" loading="eager" />
+                    </picture>
+                  </a>
+                </div>
+                <div class="project-meta-wrap">
+                  <span class="project-step-counter">Project 02 / Real-Time App</span>
+                  <h3 class="project-heading">Nexus</h3>
+                  <p class="project-synopsis">
+                    A project management tool built with the MERN stack and Socket.io. Helps engineering teams track tasks on a Kanban board, collaborate through real-time team chat, view complete ticket audit timelines, and upload attachments.
+                  </p>
+                  <ul class="project-specs">
+                    <li>Real-time board synchronization and instant chat powered by Socket.io</li>
+                    <li>Interactive Kanban board with drag-and-drop task movement</li>
+                    <li>Unified ticket audit timeline showing status changes and comments together</li>
+                    <li>Floating direct messaging dock and inline image lightbox preview</li>
+                  </ul>
+                  <div class="project-tags-list">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Socket.io</span>
+                    <span>MongoDB</span>
+                    <span>TanStack Query</span>
+                    <span>Tailwind CSS</span>
+                  </div>
+                  <div class="project-links-strip">
+                    <a href="https://github.com/ahmad-006/NEXUS" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                      <span>Source Code</span>
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Stepped Connector: Right (Project 2) to Left (Project 3) -->
+            <div class="schematic-rail">
+              <svg viewBox="0 0 1000 80" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M 750,0 L 750,40 L 250,40 L 250,80" class="rail-path" />
+                <circle cx="750" cy="0" r="3.5" class="rail-node" />
+                <circle cx="250" cy="80" r="3.5" class="rail-node" />
+              </svg>
+            </div>
+
+            <!-- Project 03: Brioza (Card on Left) -->
+            <div class="project-step-node node-left">
+              <article class="project-terminal-card">
+                <div class="project-media-wrap">
+                  <a href="https://github.com/ahmad-006" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                      <source srcset="./images/brioza_image.webp" type="image/webp" />
+                      <img src="./images/brioza_image.png" alt="Brioza Headless Storefront" loading="eager" />
+                    </picture>
+                  </a>
+                </div>
+                <div class="project-meta-wrap">
+                  <span class="project-step-counter">Project 03 / Headless Store</span>
+                  <h3 class="project-heading">Brioza</h3>
+                  <p class="project-synopsis">
+                    A custom headless online storefront connecting to Shopify's backend using the Shopify Storefront GraphQL API. Uses Next.js for quick server-side rendering, Supabase for authentication, and Tailwind CSS for responsive styling.
+                  </p>
+                  <ul class="project-specs">
+                    <li>Custom storefront connected to Shopify via GraphQL API</li>
+                    <li>Fast server-side rendering with Next.js for reliable performance</li>
+                    <li>Supabase authentication for user accounts</li>
+                  </ul>
+                  <div class="project-tags-list">
+                    <span>Next.js</span>
+                    <span>Shopify GraphQL</span>
+                    <span>Supabase</span>
+                    <span>Tailwind CSS</span>
+                  </div>
+                  <div class="project-links-strip">
+                    <a href="https://github.com/ahmad-006" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                      <span>Source Code</span>
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Stepped Connector: Left (Project 3) to Right (Project 4) -->
+            <div class="schematic-rail">
+              <svg viewBox="0 0 1000 80" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M 250,0 L 250,40 L 750,40 L 750,80" class="rail-path" />
+                <circle cx="250" cy="0" r="3.5" class="rail-node" />
+                <circle cx="750" cy="80" r="3.5" class="rail-node" />
+              </svg>
+            </div>
+
+            <!-- Project 04: Financy Buddy (Card on Right) -->
+            <div class="project-step-node node-right">
+              <article class="project-terminal-card">
+                <div class="project-media-wrap">
+                  <a href="https://financybuddy.vercel.app" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                      <source srcset="./images/financybuddy.webp" type="image/webp" />
+                      <img src="./images/financybuddy.png" alt="Financy Buddy Finance Tracker" loading="eager" />
+                    </picture>
+                  </a>
+                </div>
+                <div class="project-meta-wrap">
+                  <span class="project-step-counter">Project 04 / Finance App</span>
+                  <h3 class="project-heading">Financy Buddy</h3>
+                  <p class="project-synopsis">
+                    A personal finance web application built to help users manage daily income, track expenses, and view monthly savings charts. Built on the MERN stack with React Query for quick and smooth state updates.
+                  </p>
+                  <ul class="project-specs">
+                    <li>Income and expense recording with category filters</li>
+                    <li>Fast optimistic updates with React Query without page lag</li>
+                    <li>Secure user login and token authentication</li>
+                  </ul>
+                  <div class="project-tags-list">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                    <span>React Query</span>
+                  </div>
+                  <div class="project-links-strip">
+                    <a href="https://financybuddy.vercel.app" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                      <span>Live Website</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-row reverse scroll-reveal">
-            <div class="project-image">
-              <a href="https://github.com/ahmad-006" target="_blank">
-                <img src="https://placehold.co/800x530/e2e8f0/1e293b?text=Coming+Soon" alt="Nexus - Coming Soon" />
-              </a>
-            </div>
-            <div class="project-info">
-              <span class="project-type">Ticket Management System</span>
-              <h3 class="project-name">Nexus <span style="font-size: 1.6rem; color: var(--text-secondary); font-weight: 400; vertical-align: middle;">(In Progress)</span></h3>
-              <p class="project-desc">
-                Engineered a real-time communication layer using Socket.io for instant messaging and live ticket updates. Implemented a complex hierarchical thread-based commenting system backed by MongoDB.
-              </p>
-              <div class="project-tags">
-                <span>React</span><span>Node.js</span><span>Socket.io</span><span>MongoDB</span>
-              </div>
-              <a href="https://github.com/ahmad-006" target="_blank" class="project-link">View Source <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-          
-          <!-- Project 3 -->
-          <div class="project-row scroll-reveal">
-            <div class="project-image">
-              <a href="https://financybuddy.vercel.app" target="_blank">
-                <img src="./images/financybuddy.png" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'" alt="Financy Buddy" />
-              </a>
-            </div>
-            <div class="project-info">
-              <span class="project-type">Finance Dashboard</span>
-              <h3 class="project-name">Financy Buddy</h3>
-              <p class="project-desc">
-                Developed a comprehensive MERN dashboard for secure financial tracking. Utilized React Query for advanced server-state synchronization and optimistic UI updates for a zero-lag experience.
-              </p>
-              <div class="project-tags">
-                <span>MERN Stack</span><span>React Query</span><span>Express.js</span>
-              </div>
-              <a href="https://financybuddy.vercel.app" target="_blank" class="project-link">Live App <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+          <!-- Archive Route Navigation CTA -->
+          <div class="archive-cta-block">
+            <a href="./projects.html" class="btn-classic-outline">
+              <span>View More Projects in Archive</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
-        
-        <div class="text-center" style="margin-top: 4rem;">
-            <a href="./projects.html" class="btn-secondary">View All Projects</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact -->
-    <section class="section bg-light" id="contact">
-      <div class="container contact-container scroll-reveal">
-        <div class="contact-details">
-          <h2 class="section-title">Let's create <br><i>something</i> together.</h2>
-          <p class="contact-text">Currently open to new opportunities, collaborations, and interesting projects. Reach out and let's start a conversation.</p>
-          
-          <div class="contact-links">
-            <a href="mailto:ahmadaamir1806@gmail.com"><i class="fa-solid fa-envelope"></i> ahmadaamir1806@gmail.com</a>
+      <!-- Section 04: Contact -->
+      <section class="section-block" id="contact">
+        <div class="container">
+          <div class="section-mast">
+            <span class="section-number">04 / CONTACT</span>
+            <h2 class="section-headline">Get In <i>Touch</i></h2>
           </div>
-          
-          <div class="social-links">
-            <a href="https://github.com/ahmad-006" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/ahmad-aamir-5b210a371/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:ahmadaamir1806@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+          <div class="contact-split-grid">
+            <div>
+              <p class="contact-bio-lead">
+                I am currently open to full-stack developer roles, internships, and project work. Feel free to reach out directly.
+              </p>
+
+              <div class="contact-channels">
+                <div>
+                  <div class="channel-label">Email Address</div>
+                  <div class="channel-email" onclick="copyEmail()">
+                    <span id="emailText">ahmadaamir1806@gmail.com</span>
+                    <i class="fa-regular fa-copy" id="copyIcon"></i>
+                  </div>
+                  <span id="copyFeedback" style="display: block; font-family: var(--font-mono); font-size: 1.2rem; color: var(--ink-muted); margin-top: 0.6rem; min-height: 1.6rem;"></span>
+                </div>
+
+                <div>
+                  <div class="channel-label">Profiles</div>
+                  <div class="social-links-list">
+                    <a href="https://github.com/ahmad-006" target="_blank" rel="noopener noreferrer" class="social-link-item">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ahmad-aamir-5b210a371/" target="_blank" rel="noopener noreferrer" class="social-link-item">LinkedIn</a>
+                    <a href="mailto:ahmadaamir1806@gmail.com" class="social-link-item">Email</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="academic-form" id="contactForm">
+                <!-- Required for Netlify form processing via AJAX -->
+                <input type="hidden" name="form-name" value="contact" />
+
+                <!-- Honeypot field for bot spam filtering -->
+                <p style="display: none;">
+                  <label>Leave this empty: <input name="bot-field" /></label>
+                </p>
+
+                <div class="academic-input-group">
+                  <input type="text" name="name" id="name" required placeholder=" " />
+                  <label for="name">Your Name</label>
+                </div>
+                <div class="academic-input-group">
+                  <input type="email" name="email" id="email" required placeholder=" " />
+                  <label for="email">Your Email</label>
+                </div>
+                <div class="academic-input-group">
+                  <textarea name="message" id="message" rows="4" required placeholder=" "></textarea>
+                  <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn-classic-primary" style="align-self: flex-start;">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <div class="form-msg-state" id="msg" role="status" aria-live="polite"></div>
+              </form>
+            </div>
           </div>
         </div>
-        
-        <div class="contact-form-wrapper">
-          <form name="submit-to-google-sheet" class="modern-form">
-            <div class="input-group">
-              <input type="text" name="Name" id="name" required placeholder=" " />
-              <label for="name">Your Name</label>
-            </div>
-            <div class="input-group">
-              <input type="email" name="Email" id="email" required placeholder=" " />
-              <label for="email">Your Email</label>
-            </div>
-            <div class="input-group">
-              <textarea name="Message" id="message" rows="4" required placeholder=" "></textarea>
-              <label for="message">Your Message</label>
-            </div>
-            <button type="submit" class="btn-primary w-100">Send Message</button>
-            <span id="msg"></span>
-          </form>
-        </div>
-      </div>
-    </section>
+      </section>
     </main>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2026 Ahmad Aamir. Crafted with intent and precision.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Ahmad Aamir. Built with intent and precision.</p>
+        <p style="font-family: var(--font-mono); font-size: 1.2rem;">TypeScript • Next.js • React • Node.js • PostgreSQL</p>
       </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-      // Mobile Menu Toggle
-      const navLinks = document.getElementById("navLinks");
+      // Mobile Navigation
+      const navMenu = document.getElementById('navMenu');
+      const menuIcon = document.getElementById('menuIcon');
+
       function toggleMenu() {
-        navLinks.classList.toggle("active");
+        const isActive = navMenu.classList.toggle('active');
+        if (isActive) {
+          menuIcon.classList.remove('fa-bars');
+          menuIcon.classList.add('fa-xmark');
+        } else {
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars');
+        }
       }
 
-      // Close menu when a link is clicked
-      document.querySelectorAll('.nav-links li a').forEach(link => {
-          link.addEventListener('click', () => {
-              navLinks.classList.remove('active');
-          });
+      document.querySelectorAll('.nav-menu li a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          menuIcon.classList.remove('fa-xmark');
+          menuIcon.classList.add('fa-bars');
+        });
       });
 
-      // Google Sheets Form Submission
-      const scriptURL = "https://script.google.com/macros/s/AKfycbynkV7Ezet8B-8MLwortMJXa6dr1KSxzEJNG9SHPv-Ocv60Ixh9JAO9Y8q0v0-ZmKBhgw/exec";
-      const form = document.forms["submit-to-google-sheet"];
+      // 1-Click Copy Email
+      function copyEmail() {
+        const email = "ahmadaamir1806@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+          const feedback = document.getElementById('copyFeedback');
+          const icon = document.getElementById('copyIcon');
+          feedback.textContent = "Copied to clipboard.";
+          icon.classList.remove('fa-copy');
+          icon.classList.add('fa-check');
+          setTimeout(() => {
+            feedback.textContent = "";
+            icon.classList.remove('fa-check');
+            icon.classList.add('fa-copy');
+          }, 3000);
+        });
+      }
+
+      // Netlify Forms AJAX Pipeline
+      const contactForm = document.getElementById("contactForm");
       const msg = document.getElementById("msg");
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        msg.style.color = "#4f46e5";
-        msg.innerHTML = "Sending your message...";
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          msg.style.color = "#111827";
+          msg.textContent = "Sending...";
 
-        try {
-          const response = await fetch(scriptURL, { method: "POST", body: new FormData(form) });
-          if (response.ok) {
-            msg.style.color = "#10b981";
-            msg.innerHTML = "Message Sent Successfully!";
-            form.reset();
-          } else {
+          const formData = new FormData(contactForm);
+
+          try {
+            const response = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString()
+            });
+
+            if (response.ok) {
+              msg.style.color = "#10b981";
+              msg.textContent = "Message sent successfully! I will reply to your email shortly.";
+              contactForm.reset();
+            } else {
+              msg.style.color = "#ef4444";
+              msg.textContent = "Could not send message. Please email me directly at ahmadaamir1806@gmail.com";
+            }
+          } catch (error) {
             msg.style.color = "#ef4444";
-            msg.innerHTML = "Error! Message not sent.";
+            msg.textContent = "Network error. Please email me directly at ahmadaamir1806@gmail.com";
           }
-        } catch (error) {
-          msg.style.color = "#ef4444";
-          msg.innerHTML = "Error! Message not sent.";
-        }
-        setTimeout(() => { msg.innerHTML = ""; }, 5000);
-      });
-
-      // Scroll Reveal Animation (Intersection Observer)
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-          }
+          setTimeout(() => { msg.textContent = ""; }, 6000);
         });
-      }, observerOptions);
-
-      document.querySelectorAll('.scroll-reveal').forEach(el => {
-        observer.observe(el);
-      });
+      }
     </script>
   </body>
 </html>
